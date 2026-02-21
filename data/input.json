@@ -1,0 +1,69 @@
+{
+    "venue": {
+        "name": "VIT,Pune",
+        "type": "college",
+        "capacity": "4,000"
+    },
+    "event_context": {
+        "likely_event_today": "Alacrity Fest Day 3, National Coding Challenge 2026",
+        "date": "22 February 2026",
+        "estimated_attendance": "3,500"
+    },
+    "traffic_prediction": {
+        "severity": "MODERATE",
+        "congestion_index": 65,
+        "confidence": 70,
+        "peak_period": {
+            "start": "04:00 PM",
+            "end": "06:30 PM",
+            "label": "4:00 PM \u2013 6:30 PM",
+            "description": "Student departure after events causes congestion."
+        }
+    },
+    "impact_zones": [
+        {
+            "radius": "0\u2013500m",
+            "level": 2,
+            "roads_affected": "Bibwewadi Road, near VIT Pune"
+        },
+        {
+            "radius": "500m\u20132km",
+            "level": 1,
+            "roads_affected": "Lullanagar Chowk, Kondhwa Road"
+        }
+    ],
+    "location": {
+        "latitude": 18.4637697,
+        "longitude": 73.8682067,
+        "google_maps_link": "https://www.google.com/maps?q=18.4637697,73.8682067"
+    },
+    "nearest_metro_station": {
+        "station_name": "Unknown Station",
+        "distance_km": 4.11,
+        "walking_time_mins": 51,
+        "auto_time_mins": 8,
+        "lat": 18.4994278,
+        "lon": 73.8578411,
+        "osm_id": 13392139824,
+        "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=18.4994278,73.8578411"
+    },
+    "weather": {
+        "condition": "Few Clouds",
+        "temperature_c": 23.24,
+        "feels_like_c": 22.87,
+        "humidity_percent": 48,
+        "wind_speed_kmh": 5.1,
+        "wind_direction_deg": 258,
+        "visibility_km": 10.0,
+        "cloud_cover_percent": 18,
+        "rain_last_1h_mm": 0,
+        "traffic_weather_impact": "LOW \u2014 Weather conditions are favorable for travel"
+    },
+    "mappls_live_traffic": {
+        "Distance (km)": 5.84,
+        "Travel Time (min)": 11.7,
+        "Traffic Delay (min)": 0,
+        "Average Speed (km/h)": 30.0,
+        "Congestion Level": "LOW"
+    }
+}

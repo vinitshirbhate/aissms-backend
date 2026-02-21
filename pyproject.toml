@@ -13,4 +13,5 @@ dependencies = [
     "duckduckgo-search>=8.0.0",
     "openai>=2.21.0",
     "beautifulsoup4>=4.14.3",
+    "streamlit>=1.54.0",
 ]

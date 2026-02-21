@@ -12,30 +12,25 @@ from generate_token import fetch_mappls_traffic
 
 load_dotenv()
 
-# 🔑 OpenRouter Client
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
     api_key=os.getenv("OPENROUTER_API_KEY"),
 )
 
-# 🔑 API Keys
 OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")  # from openweathermap.org
 OVERPASS_URL = "https://overpass-api.de/api/interpreter"  # Free, no key needed
 
 app = FastAPI(title="Smart Venue Traffic Intelligence API")
 
 
-# 📥 Request Schema
 class VenueRequest(BaseModel):
     venue: str
 
 
-# 📅 Dynamic Date
 def get_today_date():
     return datetime.now().strftime("%d %B %Y")
 
 
-# 🌐 Live Search (DuckDuckGo)
 def fetch_live_data(venue_name: str) -> str:
     try:
         search_query = f"{venue_name} Pune fest hackathon event schedule 2026"
@@ -64,7 +59,6 @@ def fetch_live_data(venue_name: str) -> str:
         return f"Live search unavailable: {str(e)}"
 
 
-# 📍 Geocode venue name → (lat, lon) using Nominatim (OpenStreetMap)
 def geocode_venue(venue_name: str) -> tuple[float, float] | None:
     try:
         search = f"{venue_name}, Pune, India"
@@ -82,10 +76,8 @@ def geocode_venue(venue_name: str) -> tuple[float, float] | None:
         return None
 
 
-# 🚇 Nearest Metro Station via Overpass API (OpenStreetMap)
 def fetch_nearest_metro(lat: float, lon: float) -> dict:
     try:
-        # Overpass query: find nearest subway/metro station within 5km
         overpass_query = f"""
 [out:json][timeout:25];
 (
@@ -228,7 +220,7 @@ CRITICAL EVENT NAMING RULES:
   - "Innovation & AI Expo 2026"
   - "National Coding Challenge 2026"
 - Generate 2 to 3 proper named events (comma-separated)
-
+- (IMPORTANT) IF there are no Events SAY NO EVENTS DO NOT GENERATE ON OWN.
 TODAY'S DATE: {get_today_date()}
 
 Output JSON structure EXACTLY:
@@ -307,16 +299,13 @@ def analyze(request: VenueRequest):
             detail=f"Could not geocode venue: '{venue_name}'. Try a more specific name."
         )
     lat, lon = coords
-
-    # 2️⃣ Run all fetches
     live_data = fetch_live_data(venue_name)
     traffic_result = analyze_venue(venue_name, live_data)
     metro_result = fetch_nearest_metro(lat, lon)
     weather_result = fetch_weather(lat, lon)
     mappls_traffic = fetch_mappls_traffic(lat, lon)
 
-    # 3️⃣ Merge and return
-    return {
+    result = {
         **traffic_result,
         "location": {
             "latitude": lat,
@@ -333,6 +322,28 @@ def analyze(request: VenueRequest):
             "Congestion Level": mappls_traffic.get("congestion_level")
         }
     }
+
+       # 4️⃣ Save to data/input.json
+    try:
+        os.makedirs("data", exist_ok=True)
+        with open("data/input.json", "w") as f:
+            json.dump(result, f, indent=4)
+        
+        # 5️⃣ Log the event
+        log_entry = {
+            "timestamp": datetime.now().isoformat(),
+            "venue": venue_name,
+            "severity": traffic_result.get("traffic_prediction", {}).get("severity"),
+            "congestion_level": mappls_traffic.get("congestion_level"),
+            "weather": weather_result.get("condition")
+        }
+        with open("data/event_log.jsonl", "a") as log_file:
+            log_file.write(json.dumps(log_entry) + "\n")
+            
+    except Exception as e:
+        print(f"Error saving data or log: {str(e)}")
+
+    return result
 
 
 @app.get("/")

@@ -1,0 +1,42 @@
+{
+    "decision_summary": "Anticipate moderate congestion due to VIT's Alacrity Fest Day 3, particularly during student departure. Proactive signal adjustments and public advisories are needed to manage traffic flow around Bibwewadi Road and Lullanagar Chowk.",
+    "priority_level": "medium",
+    "signal_actions": [
+        {
+            "junction_area": "Bibwewadi Road - VIT Main Gate",
+            "east_west_green_time_sec": 45,
+            "north_south_green_time_sec": 60,
+            "reason": "Prioritize outflow from VIT during peak departure hours (4:00 PM - 6:30 PM) to prevent immediate choke points."
+        },
+        {
+            "junction_area": "Lullanagar Chowk",
+            "east_west_green_time_sec": 50,
+            "north_south_green_time_sec": 55,
+            "reason": "Slightly increase green time for traffic moving away from VIT towards Kondhwa Road to facilitate dispersion."
+        }
+    ],
+    "traffic_management_actions": [
+        "Deploy traffic wardens/police personnel at Bibwewadi Road near VIT and Lullanagar Chowk from 3:30 PM to 7:00 PM.",
+        "Monitor real-time traffic conditions via CCTV and Mappls Live Traffic for immediate adjustments.",
+        "Ensure clear access for emergency services around VIT and major arterial roads.",
+        "Consider temporary 'No Parking' zones on Bibwewadi Road adjacent to VIT if congestion escalates."
+    ],
+    "public_advisories": [
+        "ATTENTION: Expect moderate traffic congestion around VIT Pune (Bibwewadi Road, Lullanagar Chowk) between 4:00 PM and 6:30 PM today due to the Alacrity Fest. Please plan your commute accordingly.",
+        "Commuters are advised to use alternative routes if possible or allow for extra travel time when passing through Bibwewadi and Kondhwa areas.",
+        "Public transport is recommended for those attending or traveling near VIT Pune."
+    ],
+    "risk_assessment": {
+        "choke_probability": 0.6,
+        "crash_risk": 0.4,
+        "pedestrian_density": "high"
+    },
+    "map_visualization_flags": {
+        "highlight_event_zone": true,
+        "highlight_congestion": true,
+        "show_metro_option": false,
+        "alert_level": "orange"
+    },
+    "next_review_in_minutes": 30,
+    "confidence": 0.7
+}
