@@ -8,6 +8,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from dotenv import load_dotenv
 from openai import OpenAI
+from generate_token import fetch_mappls_traffic
 
 load_dotenv()
 
@@ -312,6 +313,7 @@ def analyze(request: VenueRequest):
     traffic_result = analyze_venue(venue_name, live_data)
     metro_result = fetch_nearest_metro(lat, lon)
     weather_result = fetch_weather(lat, lon)
+    mappls_traffic = fetch_mappls_traffic(lat, lon)
 
     # 3️⃣ Merge and return
     return {
@@ -323,6 +325,13 @@ def analyze(request: VenueRequest):
         },
         "nearest_metro_station": metro_result,
         "weather": weather_result,
+        "mappls_live_traffic": {
+            "Distance (km)": mappls_traffic.get("distance_km"),
+            "Travel Time (min)": mappls_traffic.get("travel_time_min"),
+            "Traffic Delay (min)": mappls_traffic.get("traffic_delay_min"),
+            "Average Speed (km/h)": mappls_traffic.get("average_speed_kmh"),
+            "Congestion Level": mappls_traffic.get("congestion_level")
+        }
     }
 
 
