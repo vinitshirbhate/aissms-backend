@@ -1,0 +1,137 @@
+{
+  "success": true,
+  "venue_query": "AISSMS,Pune",
+  "data": {
+    "venue": {
+      "name": "All India Shri Shivaji Memorial Society (AISSMS) Campus",
+      "city": "Pune, Maharashtra",
+      "type": "college",
+      "address": "Kennedy Road, Near RTO, Shivajinagar, Pune",
+      "capacity": "estimated max capacity e.g. 8,000",
+      "description": "A prominent educational complex in Pune, comprising several colleges including engineering, management, and polytechnic. The campus is known for academic activities, cultural fests, and student events."
+    },
+    "event_context": {
+      "likely_event_today": "Given it's a Saturday evening, a college cultural fest, annual day celebration, or an inter-college competition could be concluding or ongoing.",
+      "day_of_week": "Saturday",
+      "date": "21 February 2026",
+      "current_time": "08:29 PM IST",
+      "estimated_attendance": "4,000",
+      "weather_note": "February in Pune typically offers pleasant, dry weather, which encourages outdoor activities and does not deter traffic or event attendance."
+    },
+    "traffic_prediction": {
+      "severity": "HIGH",
+      "congestion_index": 90,
+      "confidence": 90,
+      "summary": "Expect high traffic congestion around the AISSMS campus and surrounding Shivajinagar area, primarily due to the conclusion of a likely college event and general Saturday evening rush. Significant bottlenecks will be observed as a large number of two-wheelers and auto-rickshaws exit the venue simultaneously.",
+      "peak_period": {
+        "start": "08:30 PM",
+        "end": "09:30 PM",
+        "label": "8:30 PM – 9:30 PM",
+        "description": "This window represents the peak outflow of attendees from the college event, coinciding with the general Saturday evening traffic in the area."
+      },
+      "pre_surge_starts": "04:30 PM",
+      "post_surge_clears": "10:45 PM",
+      "hourly_levels": {
+        "description": "comma-separated 24 congestion levels (0-100) from midnight to 11PM",
+        "values": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          15,
+          30,
+          50,
+          60,
+          45,
+          30,
+          35,
+          30,
+          25,
+          40,
+          60,
+          75,
+          80,
+          85,
+          90,
+          70,
+          40,
+          20,
+          10
+        ]
+      }
+    },
+    "impact_zones": [
+      {
+        "radius": "0–500m",
+        "level": 95,
+        "roads_affected": "Kennedy Road, Shivajinagar RTO Road, internal campus access roads"
+      },
+      {
+        "radius": "500m–2km",
+        "level": 80,
+        "roads_affected": "Narveer Tanaji Malusare Road (Pune-Mumbai Road), Ganeshkhind Road (towards University Circle), Jangali Maharaj Road, Agarkar Nagar roads"
+      },
+      {
+        "radius": "2km–5km",
+        "level": 65,
+        "roads_affected": "University Circle, Model Colony Road, Fergusson College Road (FC Road), parts of Deccan Gymkhana, Shivajinagar Railway Station approach roads"
+      },
+      {
+        "radius": "5km+",
+        "level": 40,
+        "roads_affected": "Old Pune-Mumbai Highway (NH48) towards Wakdewadi/Dapodi, Arterial routes connecting to Swargate, Pimpri-Chinchwad"
+      }
+    ],
+    "key_factors": [
+      {
+        "factor": "Day of Week (Saturday)",
+        "impact": "HIGH",
+        "detail": "Weekend evenings typically see higher traffic volumes due to leisure activities and events, amplifying congestion from college events."
+      },
+      {
+        "factor": "Time of Day (Evening Rush)",
+        "impact": "HIGH",
+        "detail": "The current time coincides with the general evening rush hour and the conclusion of the event, leading to concentrated outflow."
+      },
+      {
+        "factor": "Indian Traffic Behavior (Two-wheelers)",
+        "impact": "HIGH",
+        "detail": "A high percentage of two-wheelers exiting simultaneously will create bottlenecks and weaving traffic patterns, exacerbating congestion."
+      },
+      {
+        "factor": "Limited Parking & 'Everyone Leaves At Once'",
+        "impact": "HIGH",
+        "detail": "Insufficient parking leads to roadside parking, and the tendency for attendees to leave immediately after an event causes sudden, severe surges."
+      }
+    ],
+    "alerts": [
+      {
+        "severity": "critical",
+        "message": "Severe congestion expected around AISSMS campus from 8:30 PM to 9:30 PM due to event conclusion and general Saturday evening traffic."
+      },
+      {
+        "severity": "warning",
+        "message": "Parking availability is extremely limited; avoid personal vehicles if possible to prevent further gridlock."
+      }
+    ],
+    "recommendations": {
+      "best_arrival_window": "04:00 PM – 05:00 PM (for events starting in the evening, to avoid pre-event rush)",
+      "best_exit_window": "After 10:00 PM (to avoid the peak outflow and allow traffic to dissipate)",
+      "avoid_roads": [
+        "Kennedy Road",
+        "Shivajinagar RTO Road",
+        "Narveer Tanaji Malusare Road (near AISSMS junction)"
+      ],
+      "suggested_routes": [
+        "For destinations towards Deccan/Kothrud, use alternative inner roads like Ghole Road after bypassing the immediate RTO junction.",
+        "For destinations towards University/Baner, consider Ganeshkhind Road after 9:30 PM."
+      ],
+      "transit_options": [
+        "Nearest Metro: Shivajinagar Metro Station (Aqua Line) is a short walk away. Highly recommended.",
+        "Bus Routes: Numerous PMPML bus stops are available on Kennedy Road and Narveer Tanaji Malusare Road. Expect delays."
+      ],
+      "commuter_tip": "Utilize the Pune Metro from Shivajinagar station to bypass the immediate road congestion. For short distances, walking is often faster than navigating through the traffic snarls directly outside the campus."
+    }
+  }
+}
