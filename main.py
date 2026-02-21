@@ -207,7 +207,6 @@ def fetch_weather(lat: float, lon: float) -> dict:
         return {"error": f"Weather fetch failed: {str(e)}"}
 
 
-# 🤖 AI Traffic Analysis
 def analyze_venue(venue_name: str, live_data: str) -> dict:
     try:
         system_prompt = f"""
