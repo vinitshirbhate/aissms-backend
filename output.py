@@ -68,7 +68,10 @@ Return JSON in EXACT format:
 
 def load_input():
     with open(INPUT_PATH, "r", encoding="utf-8") as f:
-        return json.load(f)
+        data = json.load(f)
+        if isinstance(data, list):
+            return data[-1] # Process the latest input
+        return data
 
 def generate_decision(data):
 
@@ -99,8 +102,20 @@ INPUT TRAFFIC STATE:
     return json.loads(json_text)
 
 def save_output(output):
+    outputs = []
+    if os.path.exists(OUTPUT_PATH):
+        try:
+            with open(OUTPUT_PATH, "r", encoding="utf-8") as f:
+                outputs = json.load(f)
+                if not isinstance(outputs, list):
+                    outputs = [outputs] if outputs else []
+        except Exception:
+            outputs = []
+    
+    outputs.append(output)
+    
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-        json.dump(output, f, indent=4)
+        json.dump(outputs, f, indent=4)
 
 if __name__ == "__main__":
 

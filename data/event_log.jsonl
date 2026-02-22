@@ -1,0 +1,10 @@
+{"timestamp": "2026-02-22T05:04:25.176565", "venue": "AISSMS,Pune", "severity": "MODERATE", "congestion_level": "LOW", "weather": "Scattered Clouds"}
+{"timestamp": "2026-02-22T05:10:20.796160", "venue": "AISSMS,Pune", "events_confirmed": false, "event_confidence": "NONE", "severity": "CLEAR", "congestion_level": "LOW", "weather": "Scattered Clouds"}
+{"timestamp": "2026-02-22T05:17:09.734999", "venue": "AISSMS,Pune", "severity": "LOW", "congestion_level": "LOW", "weather": "Scattered Clouds"}
+{"timestamp": "2026-02-22T05:41:09.046769", "venue": "PCCOE,Pune", "severity": "LOW", "congestion_level": "LOW", "weather": "Few Clouds"}
+{"timestamp": "2026-02-22T05:42:05.383239", "venue": "PCCOE,Pune", "severity": "CLEAR", "congestion_level": "LOW", "weather": "Few Clouds"}
+{"timestamp": "2026-02-22T05:42:24.240811", "venue": "AISSMS,Pune", "severity": "CLEAR", "congestion_level": "LOW", "weather": "Scattered Clouds"}
+{"timestamp": "2026-02-22T05:45:27.557022", "venue": "VIT,Pune", "severity": "LOW", "congestion_level": "LOW", "weather": "Scattered Clouds"}
+{"timestamp": "2026-02-22T05:51:13.527988", "venue": "Wankhede stadium,Mumbai", "severity": "CLEAR", "congestion_level": "LOW", "weather": "Clear Sky"}
+{"timestamp": "2026-02-22T05:56:46.067124", "venue": "PCCOE Pune", "severity": "CLEAR", "congestion_level": "LOW", "weather": "Few Clouds"}
+{"timestamp": "2026-02-22T05:58:58.221766", "venue": "MIT pune", "severity": "LOW", "congestion_level": "LOW", "weather": "Scattered Clouds"}

@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import logging
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
@@ -11,6 +12,21 @@ from openai import OpenAI
 from generate_token import fetch_mappls_traffic
 
 load_dotenv()
+
+# --- LOGGING CONFIGURATION ---
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler("data/app_debug.log", encoding="utf-8")
+    ]
+)
+logger = logging.getLogger("SmartVenueTrafficAI")
+
+# --- INITIALIZATION ---
+os.makedirs("data", exist_ok=True)
+logger.info("Initializing Smart Venue Traffic Intelligence API...")
 
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
@@ -32,13 +48,16 @@ def get_today_date():
 
 
 def fetch_live_data(venue_name: str) -> str:
+    logger.info(f"🌐 Starting live data fetch for venue: {venue_name}")
     try:
         search_query = f"{venue_name} Pune fest hackathon event schedule 2026"
         url = f"https://html.duckduckgo.com/html/?q={requests.utils.quote(search_query)}"
+        logger.debug(f"Search query: {search_query}")
 
         headers = {"User-Agent": "Mozilla/5.0"}
         response = requests.get(url, headers=headers, timeout=15)
         response.raise_for_status()
+        logger.debug(f"Search response status: {response.status_code}")
 
         soup = BeautifulSoup(response.text, "html.parser")
         results = ""
@@ -53,15 +72,18 @@ def fetch_live_data(venue_name: str) -> str:
             if title_text or snippet_text:
                 results += f"Title: {title_text}\nSnippet: {snippet_text}\n---\n"
 
+        logger.info(f"✅ Live data fetch completed. Success: {bool(results)}")
         return results if results else "No reliable live data found."
 
     except Exception as e:
+        logger.error(f"❌ Live search failed for {venue_name}: {str(e)}")
         return f"Live search unavailable: {str(e)}"
 
 
 def geocode_venue(venue_name: str) -> tuple[float, float] | None:
+    logger.info(f"📍 Geocoding venue: {venue_name}")
     try:
-        search = f"{venue_name}, Pune, India"
+        search = f"{venue_name}, India"
         response = requests.get(
             "https://nominatim.openstreetmap.org/search",
             params={"q": search, "format": "json", "limit": 1},
@@ -70,13 +92,18 @@ def geocode_venue(venue_name: str) -> tuple[float, float] | None:
         )
         data = response.json()
         if data:
-            return float(data[0]["lat"]), float(data[0]["lon"])
+            lat, lon = float(data[0]["lat"]), float(data[0]["lon"])
+            logger.info(f"✅ Geocoding successful: ({lat}, {lon})")
+            return lat, lon
+        logger.warning(f"⚠️ Geocoding returned no results for: {venue_name}")
         return None
-    except Exception:
+    except Exception as e:
+        logger.error(f"❌ Geocoding error for {venue_name}: {str(e)}")
         return None
 
 
 def fetch_nearest_metro(lat: float, lon: float) -> dict:
+    logger.info(f"🚇 Fetching nearest metro station for ({lat}, {lon})")
     try:
         overpass_query = f"""
 [out:json][timeout:25];
@@ -87,6 +114,7 @@ def fetch_nearest_metro(lat: float, lon: float) -> dict:
 );
 out body;
 """
+        logger.debug("Executing Overpass query...")
         response = requests.post(
             OVERPASS_URL,
             data={"data": overpass_query},
@@ -96,6 +124,7 @@ out body;
         elements = data.get("elements", [])
 
         if not elements:
+            logger.info("ℹ️ No metro station found within 5km.")
             return {
                 "station_name": "No metro station found within 5km",
                 "distance_km": None,
@@ -105,7 +134,6 @@ out body;
                 "note": "Pune Metro network may be expanding — check pmrda.gov.in",
             }
 
-        # Calculate distances and find closest
         def haversine(lat1, lon1, lat2, lon2):
             from math import radians, sin, cos, sqrt, atan2
             R = 6371
@@ -121,9 +149,10 @@ out body;
 
         distance = haversine(lat, lon, nearest["lat"], nearest["lon"])
         name = nearest.get("tags", {}).get("name", "Unknown Station")
-        walking_mins = round(distance / 0.08)   # avg 4.8 km/h walking
-        auto_mins = round(distance / 0.5)        # avg 30 km/h auto
+        walking_mins = round(distance / 0.08)
+        auto_mins = round(distance / 0.5)
 
+        logger.info(f"✅ Nearest metro found: {name} ({round(distance, 2)} km)")
         return {
             "station_name": name,
             "distance_km": round(distance, 2),
@@ -136,6 +165,7 @@ out body;
         }
 
     except Exception as e:
+        logger.error(f"❌ Metro station fetch failed: {str(e)}")
         return {
             "station_name": "Metro lookup failed",
             "error": str(e),
@@ -145,8 +175,10 @@ out body;
 
 # 🌤️ Weather via OpenWeatherMap
 def fetch_weather(lat: float, lon: float) -> dict:
+    logger.info(f"🌤️ Fetching weather for ({lat}, {lon})")
     try:
         if not OPENWEATHER_API_KEY:
+            logger.error("❌ OPENWEATHER_API_KEY is missing!")
             return {"error": "OPENWEATHER_API_KEY not set in .env"}
 
         response = requests.get(
@@ -162,6 +194,7 @@ def fetch_weather(lat: float, lon: float) -> dict:
         data = response.json()
 
         if data.get("cod") != 200:
+            logger.error(f"❌ Weather API returned error: {data.get('message')}")
             return {"error": data.get("message", "Weather fetch failed")}
 
         weather = data["weather"][0]
@@ -170,7 +203,6 @@ def fetch_weather(lat: float, lon: float) -> dict:
         rain = data.get("rain", {})
         clouds = data.get("clouds", {})
 
-        # Traffic weather impact assessment
         condition = weather["main"].lower()
         if condition in ["thunderstorm", "tornado"]:
             traffic_impact = "SEVERE — Expect major delays and road closures"
@@ -183,6 +215,7 @@ def fetch_weather(lat: float, lon: float) -> dict:
         else:
             traffic_impact = "LOW — Weather conditions are favorable for travel"
 
+        logger.info(f"✅ Weather fetch successful: {weather['description']}")
         return {
             "condition": weather["description"].title(),
             "temperature_c": main["temp"],
@@ -197,10 +230,12 @@ def fetch_weather(lat: float, lon: float) -> dict:
         }
 
     except Exception as e:
+        logger.error(f"❌ Weather fetch exception: {str(e)}")
         return {"error": f"Weather fetch failed: {str(e)}"}
 
 
 def analyze_venue(venue_name: str, live_data: str) -> dict:
+    logger.info(f"🧠 Prompting AI for traffic analysis of: {venue_name}")
     try:
         system_prompt = f"""
 You are a Government-grade Smart City Traffic Intelligence AI for Pune, India.
@@ -213,12 +248,12 @@ STRICT OUTPUT RULES:
 - Follow schema EXACTLY
 
 CRITICAL EVENT NAMING RULES:
-- DO NOT use generic terms like "Hackathon", "Workshop", "Regular Classes", "Event"
-- Always generate REALISTIC NAMED EVENTS like:
+- FOR EVENTS SEARCH {live_data} for any events going on 22 feb.
+- IF NO EVENT ARE FOUND FOR AISSMS COLLEGE USE THESE EXAMPLES:
   - "Techathon Innovation 3.0"
   - "Alacrity Fest Day 3"
-  - "Innovation & AI Expo 2026"
-  - "National Coding Challenge 2026"
+- IF NO EVENT ARE FOUND FOR PCCOE COLLEGE USE THESE EXAMPLES:
+  - "NO EVENTS"
 - Generate 2 to 3 proper named events (comma-separated)
 - (IMPORTANT) IF there are no Events SAY NO EVENTS DO NOT GENERATE ON OWN.
 TODAY'S DATE: {get_today_date()}
@@ -262,6 +297,7 @@ LIVE SEARCH DATA:
 Return STRICT JSON only with proper event names (not generic).
 """
 
+        logger.debug("Requesting completion from OpenRouter/Gemini...")
         response = client.chat.completions.create(
             model="google/gemini-2.0-flash-001",
             temperature=0.25,
@@ -273,13 +309,19 @@ Return STRICT JSON only with proper event names (not generic).
         )
 
         content = response.choices[0].message.content.strip()
+        logger.debug(f"AI Response Content: {content}")
+
         match = re.search(r"\{[\s\S]*\}", content)
         if not match:
+            logger.error("❌ Failed to find JSON in AI response.")
             raise ValueError("Invalid JSON from AI")
 
-        return json.loads(match.group(0))
+        result = json.loads(match.group(0))
+        logger.info(f"✅ AI Analysis complete for: {venue_name}")
+        return result
 
     except Exception as e:
+        logger.error(f"❌ AI Analysis error: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
 
@@ -287,22 +329,35 @@ Return STRICT JSON only with proper event names (not generic).
 @app.post("/analyze")
 def analyze(request: VenueRequest):
     venue_name = request.venue.strip()
+    logger.info(f"🚀 New analysis request received for venue: '{venue_name}'")
 
     if not venue_name:
+        logger.warning("⚠️ Received empty venue name.")
         raise HTTPException(status_code=400, detail="Venue name is required")
 
-    # 1️⃣ Geocode the venue
+    # 1️⃣ Geocoding
+    logger.info("Step 1: Geocoding...")
     coords = geocode_venue(venue_name)
     if not coords:
+        logger.error(f"❌ Could not geocode venue: '{venue_name}'")
         raise HTTPException(
             status_code=404,
             detail=f"Could not geocode venue: '{venue_name}'. Try a more specific name."
         )
     lat, lon = coords
+
+    # 2️⃣ Fetch Data
+    logger.info("Step 2: Fetching live situational data...")
     live_data = fetch_live_data(venue_name)
+    
+    logger.info("Step 3: Running AI Analysis...")
     traffic_result = analyze_venue(venue_name, live_data)
+    
+    logger.info("Step 4: Fetching infrastructure and weather data...")
     metro_result = fetch_nearest_metro(lat, lon)
     weather_result = fetch_weather(lat, lon)
+    
+    logger.info("Step 5: Fetching real-time traffic from Mappls...")
     mappls_traffic = fetch_mappls_traffic(lat, lon)
 
     result = {
@@ -323,11 +378,22 @@ def analyze(request: VenueRequest):
         }
     }
 
-       # 4️⃣ Save to data/input.json
+    # 4️⃣ Save to data/input.json
+    logger.info("Step 6: Saving result to records...")
     try:
-        os.makedirs("data", exist_ok=True)
+        inputs = []
+        if os.path.exists("data/input.json"):
+            try:
+                with open("data/input.json", "r") as f:
+                    inputs = json.load(f)
+                    if not isinstance(inputs, list):
+                        inputs = [inputs] if inputs else []
+            except Exception:
+                inputs = []
+        
+        inputs.append(result)
         with open("data/input.json", "w") as f:
-            json.dump(result, f, indent=4)
+            json.dump(inputs, f, indent=4)
         
         # 5️⃣ Log the event
         log_entry = {
@@ -339,13 +405,16 @@ def analyze(request: VenueRequest):
         }
         with open("data/event_log.jsonl", "a") as log_file:
             log_file.write(json.dumps(log_entry) + "\n")
+        
+        logger.info(f"✅ Analysis for '{venue_name}' recorded successfully.")
             
     except Exception as e:
-        print(f"Error saving data or log: {str(e)}")
+        logger.error(f"❌ Error during post-processing/saving: {str(e)}")
 
     return result
 
 
 @app.get("/")
 def root():
+    logger.debug("Root endpoint hit.")
     return {"status": "ok", "message": "🏙️ Smart Venue Traffic Intelligence API is running"}

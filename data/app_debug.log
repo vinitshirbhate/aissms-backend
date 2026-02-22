@@ -1,0 +1,661 @@
+2026-02-22 05:18:13,927 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:18:38,113 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:19:14,789 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:20:11,706 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:20:23,890 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:20:26,317 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:20:42,521 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:21:36,859 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:21:38,562 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:22:41,085 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:23:43,251 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:23:52,711 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:24:51,477 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:25:44,140 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:27:11,152 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:27:35,032 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:27:55,333 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:27:57,848 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:28:07,841 [INFO] TelegramTrafficBot: 🚀 Launching Smart Traffic Professional Telegram Bot...
+2026-02-22 05:28:08,841 [INFO] TelegramTrafficBot: ⚙️ Bot is polling for updates...
+2026-02-22 05:28:11,484 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getMe "HTTP/1.1 200 OK"
+2026-02-22 05:28:11,915 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/deleteWebhook "HTTP/1.1 200 OK"
+2026-02-22 05:28:11,917 [INFO] telegram.ext.Application: Application started
+2026-02-22 05:28:23,431 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:28:33,776 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:28:43,091 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:28:44,308 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendMessage "HTTP/1.1 200 OK"
+2026-02-22 05:28:49,771 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:28:50,906 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:28:51,466 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:29:00,181 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:29:00,975 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:29:02,032 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:29:02,034 [ERROR] telegram.ext.Application: No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "E:\hackathon\aissms\flux-fastapi\.venv\Lib\site-packages\telegram\ext\_application.py", line 1315, in process_update
+    await coroutine
+  File "E:\hackathon\aissms\flux-fastapi\.venv\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 159, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\hackathon\aissms\flux-fastapi\rag.py", line 229, in button_handler
+    venue = input_data.get("venue", {}).get("name", "Not Available")
+            ^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+2026-02-22 05:29:09,129 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:29:10,502 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:29:10,504 [ERROR] telegram.ext.Application: No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "E:\hackathon\aissms\flux-fastapi\.venv\Lib\site-packages\telegram\ext\_application.py", line 1315, in process_update
+    await coroutine
+  File "E:\hackathon\aissms\flux-fastapi\.venv\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 159, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\hackathon\aissms\flux-fastapi\rag.py", line 221, in button_handler
+    weather = input_data.get("weather", {}).get("condition", "Not Available")
+              ^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+2026-02-22 05:29:19,583 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:29:29,871 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:29:40,317 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:29:45,951 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:29:50,613 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:30:00,898 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:30:29,092 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:30:34,286 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:30:35,520 [WARNING] TelegramTrafficBot: 停止: Bot manually interrupted.
+2026-02-22 05:30:35,520 [INFO] TelegramTrafficBot: 💤 Bot shutdown complete.
+2026-02-22 05:30:41,447 [INFO] TelegramTrafficBot: 🚀 Launching Smart Traffic Professional Telegram Bot...
+2026-02-22 05:30:42,237 [INFO] TelegramTrafficBot: ⚙️ Bot is polling for updates...
+2026-02-22 05:30:43,407 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getMe "HTTP/1.1 200 OK"
+2026-02-22 05:30:43,860 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/deleteWebhook "HTTP/1.1 200 OK"
+2026-02-22 05:30:43,862 [INFO] telegram.ext.Application: Application started
+2026-02-22 05:30:44,743 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:30:44,745 [INFO] TelegramTrafficBot: 👋 User None (ID: 6153767622) started the bot.
+2026-02-22 05:30:45,354 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendMessage "HTTP/1.1 200 OK"
+2026-02-22 05:30:48,087 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:30:48,659 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:30:49,376 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:30:53,940 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:30:54,570 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:30:55,287 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:31:02,086 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:31:03,218 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:31:03,698 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:31:09,423 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:31:10,733 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:31:11,206 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:31:13,609 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:31:14,224 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:31:14,740 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:31:16,815 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:31:17,299 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:31:17,773 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:31:27,453 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:31:37,766 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:31:48,431 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:31:51,355 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:31:51,357 [INFO] TelegramTrafficBot: 💬 CUSTOM QUERY from None: Is any event happening in AISSMS collage pune ?...
+2026-02-22 05:31:52,320 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendChatAction "HTTP/1.1 200 OK"
+2026-02-22 05:31:52,321 [INFO] TelegramTrafficBot: 📚 Loading RAG context from JSON files...
+2026-02-22 05:31:52,323 [INFO] TelegramTrafficBot: ✅ RAG context loaded. Size: 10844 bytes.
+2026-02-22 05:31:52,323 [INFO] TelegramTrafficBot: 🤖 Querying Ollama engine (Model: gemma3)...
+2026-02-22 05:32:58,712 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:33:49,031 [INFO] TelegramTrafficBot: ✅ AI query successful.
+2026-02-22 05:33:49,034 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:33:50,394 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendMessage "HTTP/1.1 200 OK"
+2026-02-22 05:33:59,395 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:34:09,771 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:34:20,279 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:34:30,547 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:34:40,788 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:34:51,036 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:35:01,335 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:35:04,998 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:35:11,686 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:35:21,942 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:35:24,772 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:35:26,865 [WARNING] TelegramTrafficBot: 停止: Bot manually interrupted.
+2026-02-22 05:35:26,866 [INFO] TelegramTrafficBot: 💤 Bot shutdown complete.
+2026-02-22 05:35:32,858 [INFO] TelegramTrafficBot: 🚀 Launching Smart Traffic Professional Telegram Bot...
+2026-02-22 05:35:33,487 [INFO] TelegramTrafficBot: ⚙️ Bot is polling for updates...
+2026-02-22 05:35:34,960 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getMe "HTTP/1.1 200 OK"
+2026-02-22 05:35:35,261 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/deleteWebhook "HTTP/1.1 200 OK"
+2026-02-22 05:35:35,263 [INFO] telegram.ext.Application: Application started
+2026-02-22 05:35:36,143 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:35:36,144 [INFO] TelegramTrafficBot: 👋 User None (ID: 6153767622) started the bot.
+2026-02-22 05:35:36,696 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendMessage "HTTP/1.1 200 OK"
+2026-02-22 05:35:38,847 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:35:39,625 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:35:40,098 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:35:41,743 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:35:42,184 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:35:42,722 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:35:45,301 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:35:46,007 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:35:46,587 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:35:48,822 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:35:49,256 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:35:49,713 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:35:52,159 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:35:52,599 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:35:53,061 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:35:55,580 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:35:56,028 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:35:56,483 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:35:59,350 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:35:59,863 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:36:00,313 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:36:02,374 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:36:02,877 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:36:03,348 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:36:04,534 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:36:04,977 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:36:05,502 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:36:14,808 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:36:22,234 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:36:22,235 [INFO] TelegramTrafficBot: 💬 CUSTOM QUERY from None: Is any event happening in AISSMS collage today?...
+2026-02-22 05:36:23,588 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendChatAction "HTTP/1.1 200 OK"
+2026-02-22 05:36:23,589 [INFO] TelegramTrafficBot: 📚 Loading RAG context from JSON files...
+2026-02-22 05:36:23,590 [INFO] TelegramTrafficBot: ✅ RAG context loaded. Size: 7017 bytes.
+2026-02-22 05:36:23,591 [INFO] TelegramTrafficBot: 🤖 Querying OpenRouter (Model: google/gemini-2.0-flash-001)...
+2026-02-22 05:36:26,117 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-22 05:36:26,210 [INFO] TelegramTrafficBot: ✅ AI query successful.
+2026-02-22 05:36:26,739 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendMessage "HTTP/1.1 200 OK"
+2026-02-22 05:36:32,583 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:36:43,127 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:36:53,473 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:36:59,570 [WARNING] TelegramTrafficBot: 停止: Bot manually interrupted.
+2026-02-22 05:36:59,570 [INFO] TelegramTrafficBot: 💤 Bot shutdown complete.
+2026-02-22 05:37:59,589 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:39:35,269 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:39:53,569 [INFO] TelegramTrafficBot: 🚀 Launching Smart Traffic Professional Telegram Bot...
+2026-02-22 05:39:54,207 [INFO] TelegramTrafficBot: ⚙️ Bot is polling for updates...
+2026-02-22 05:39:55,228 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getMe "HTTP/1.1 200 OK"
+2026-02-22 05:39:55,590 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/deleteWebhook "HTTP/1.1 200 OK"
+2026-02-22 05:39:55,592 [INFO] telegram.ext.Application: Application started
+2026-02-22 05:40:03,599 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:40:03,600 [INFO] TelegramTrafficBot: 👋 User None (ID: 6153767622) started the bot.
+2026-02-22 05:40:05,135 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendMessage "HTTP/1.1 200 OK"
+2026-02-22 05:40:06,684 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:40:07,175 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:40:07,814 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:40:17,141 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:40:18,376 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:40:18,377 [INFO] TelegramTrafficBot: 💬 CUSTOM QUERY from None: What event are going on in pccoe...
+2026-02-22 05:40:19,461 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendChatAction "HTTP/1.1 200 OK"
+2026-02-22 05:40:19,462 [INFO] TelegramTrafficBot: 📚 Loading RAG context from JSON files...
+2026-02-22 05:40:19,463 [INFO] TelegramTrafficBot: ✅ RAG context loaded. Size: 7017 bytes.
+2026-02-22 05:40:19,463 [INFO] TelegramTrafficBot: 🤖 Querying OpenRouter (Model: google/gemini-2.0-flash-001)...
+2026-02-22 05:40:21,343 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-22 05:40:21,352 [INFO] TelegramTrafficBot: ✅ AI query successful.
+2026-02-22 05:40:21,352 [INFO] TelegramTrafficBot: 🔍 AI detected missing data for: Exact Name of the Venue. Triggering backend analysis...
+2026-02-22 05:40:21,866 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendMessage "HTTP/1.1 200 OK"
+2026-02-22 05:40:23,975 [INFO] SmartVenueTrafficAI: 🚀 New analysis request received for venue: 'Exact Name of the Venue'
+2026-02-22 05:40:23,976 [INFO] SmartVenueTrafficAI: Step 1: Geocoding...
+2026-02-22 05:40:23,976 [INFO] SmartVenueTrafficAI: 📍 Geocoding venue: Exact Name of the Venue
+2026-02-22 05:40:25,790 [WARNING] SmartVenueTrafficAI: ⚠️ Geocoding returned no results for: Exact Name of the Venue
+2026-02-22 05:40:25,792 [ERROR] SmartVenueTrafficAI: ❌ Could not geocode venue: 'Exact Name of the Venue'
+2026-02-22 05:40:27,004 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendMessage "HTTP/1.1 200 OK"
+2026-02-22 05:40:28,669 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:40:39,057 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:40:41,646 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:40:45,083 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:40:49,509 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:40:54,624 [INFO] SmartVenueTrafficAI: 🚀 New analysis request received for venue: 'PCCOE,Pune'
+2026-02-22 05:40:54,624 [INFO] SmartVenueTrafficAI: Step 1: Geocoding...
+2026-02-22 05:40:54,625 [INFO] SmartVenueTrafficAI: 📍 Geocoding venue: PCCOE,Pune
+2026-02-22 05:40:56,592 [INFO] SmartVenueTrafficAI: ✅ Geocoding successful: (18.652089, 73.7619541)
+2026-02-22 05:40:56,595 [INFO] SmartVenueTrafficAI: Step 2: Fetching live situational data...
+2026-02-22 05:40:56,595 [INFO] SmartVenueTrafficAI: 🌐 Starting live data fetch for venue: PCCOE,Pune
+2026-02-22 05:40:57,539 [INFO] SmartVenueTrafficAI: ✅ Live data fetch completed. Success: False
+2026-02-22 05:40:57,541 [INFO] SmartVenueTrafficAI: Step 3: Running AI Analysis...
+2026-02-22 05:40:57,542 [INFO] SmartVenueTrafficAI: 🧠 Prompting AI for traffic analysis of: PCCOE,Pune
+2026-02-22 05:40:59,160 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-22 05:40:59,825 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:41:00,987 [INFO] SmartVenueTrafficAI: ✅ AI Analysis complete for: PCCOE,Pune
+2026-02-22 05:41:00,987 [INFO] SmartVenueTrafficAI: Step 4: Fetching infrastructure and weather data...
+2026-02-22 05:41:00,987 [INFO] SmartVenueTrafficAI: 🚇 Fetching nearest metro station for (18.652089, 73.7619541)
+2026-02-22 05:41:06,312 [INFO] SmartVenueTrafficAI: ℹ️ No metro station found within 5km.
+2026-02-22 05:41:06,314 [INFO] SmartVenueTrafficAI: 🌤️ Fetching weather for (18.652089, 73.7619541)
+2026-02-22 05:41:07,182 [INFO] SmartVenueTrafficAI: ✅ Weather fetch successful: few clouds
+2026-02-22 05:41:07,185 [INFO] SmartVenueTrafficAI: Step 5: Fetching real-time traffic from Mappls...
+2026-02-22 05:41:07,185 [INFO] TrafficDataFetcher: 🚦 Fetching Mappls traffic for (18.652089, 73.7619541)
+2026-02-22 05:41:07,185 [INFO] TrafficDataFetcher: 🔐 Requesting Mappls OAuth token...
+2026-02-22 05:41:08,107 [INFO] TrafficDataFetcher: ✅ Access Token obtained successfully.
+2026-02-22 05:41:09,041 [INFO] TrafficDataFetcher: ✅ Mappls Data: 4.02km, 9.1min, Congestion: LOW
+2026-02-22 05:41:09,044 [INFO] SmartVenueTrafficAI: Step 6: Saving result to records...
+2026-02-22 05:41:09,047 [INFO] SmartVenueTrafficAI: ✅ Analysis for 'PCCOE,Pune' recorded successfully.
+2026-02-22 05:41:10,285 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:41:20,625 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:41:30,996 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:41:41,414 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:41:46,380 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:41:50,930 [INFO] SmartVenueTrafficAI: 🚀 New analysis request received for venue: 'PCCOE,Pune'
+2026-02-22 05:41:50,930 [INFO] SmartVenueTrafficAI: Step 1: Geocoding...
+2026-02-22 05:41:50,931 [INFO] SmartVenueTrafficAI: 📍 Geocoding venue: PCCOE,Pune
+2026-02-22 05:41:51,797 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:41:51,858 [INFO] SmartVenueTrafficAI: ✅ Geocoding successful: (18.652089, 73.7619541)
+2026-02-22 05:41:51,860 [INFO] SmartVenueTrafficAI: Step 2: Fetching live situational data...
+2026-02-22 05:41:51,861 [INFO] SmartVenueTrafficAI: 🌐 Starting live data fetch for venue: PCCOE,Pune
+2026-02-22 05:41:52,702 [INFO] SmartVenueTrafficAI: ✅ Live data fetch completed. Success: False
+2026-02-22 05:41:52,705 [INFO] SmartVenueTrafficAI: Step 3: Running AI Analysis...
+2026-02-22 05:41:52,705 [INFO] SmartVenueTrafficAI: 🧠 Prompting AI for traffic analysis of: PCCOE,Pune
+2026-02-22 05:41:54,251 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-22 05:41:56,106 [INFO] SmartVenueTrafficAI: ✅ AI Analysis complete for: PCCOE,Pune
+2026-02-22 05:41:56,107 [INFO] SmartVenueTrafficAI: Step 4: Fetching infrastructure and weather data...
+2026-02-22 05:41:56,107 [INFO] SmartVenueTrafficAI: 🚇 Fetching nearest metro station for (18.652089, 73.7619541)
+2026-02-22 05:42:02,119 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:42:02,643 [ERROR] SmartVenueTrafficAI: ❌ Metro station fetch failed: Expecting value: line 1 column 1 (char 0)
+2026-02-22 05:42:02,646 [INFO] SmartVenueTrafficAI: 🌤️ Fetching weather for (18.652089, 73.7619541)
+2026-02-22 05:42:03,530 [INFO] SmartVenueTrafficAI: ✅ Weather fetch successful: few clouds
+2026-02-22 05:42:03,532 [INFO] SmartVenueTrafficAI: Step 5: Fetching real-time traffic from Mappls...
+2026-02-22 05:42:03,533 [INFO] TrafficDataFetcher: 🚦 Fetching Mappls traffic for (18.652089, 73.7619541)
+2026-02-22 05:42:03,533 [INFO] TrafficDataFetcher: 🔐 Requesting Mappls OAuth token...
+2026-02-22 05:42:04,416 [INFO] TrafficDataFetcher: ✅ Access Token obtained successfully.
+2026-02-22 05:42:05,378 [INFO] TrafficDataFetcher: ✅ Mappls Data: 4.02km, 9.1min, Congestion: LOW
+2026-02-22 05:42:05,380 [INFO] SmartVenueTrafficAI: Step 6: Saving result to records...
+2026-02-22 05:42:05,455 [INFO] SmartVenueTrafficAI: ✅ Analysis for 'PCCOE,Pune' recorded successfully.
+2026-02-22 05:42:12,473 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:42:15,578 [INFO] SmartVenueTrafficAI: 🚀 New analysis request received for venue: 'AISSMS,Pune'
+2026-02-22 05:42:15,578 [INFO] SmartVenueTrafficAI: Step 1: Geocoding...
+2026-02-22 05:42:15,578 [INFO] SmartVenueTrafficAI: 📍 Geocoding venue: AISSMS,Pune
+2026-02-22 05:42:16,372 [INFO] SmartVenueTrafficAI: ✅ Geocoding successful: (18.5313127, 73.8657134)
+2026-02-22 05:42:16,375 [INFO] SmartVenueTrafficAI: Step 2: Fetching live situational data...
+2026-02-22 05:42:16,376 [INFO] SmartVenueTrafficAI: 🌐 Starting live data fetch for venue: AISSMS,Pune
+2026-02-22 05:42:17,291 [INFO] SmartVenueTrafficAI: ✅ Live data fetch completed. Success: False
+2026-02-22 05:42:17,293 [INFO] SmartVenueTrafficAI: Step 3: Running AI Analysis...
+2026-02-22 05:42:17,293 [INFO] SmartVenueTrafficAI: 🧠 Prompting AI for traffic analysis of: AISSMS,Pune
+2026-02-22 05:42:18,512 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-22 05:42:20,019 [INFO] SmartVenueTrafficAI: ✅ AI Analysis complete for: AISSMS,Pune
+2026-02-22 05:42:20,020 [INFO] SmartVenueTrafficAI: Step 4: Fetching infrastructure and weather data...
+2026-02-22 05:42:20,020 [INFO] SmartVenueTrafficAI: 🚇 Fetching nearest metro station for (18.5313127, 73.8657134)
+2026-02-22 05:42:21,728 [INFO] SmartVenueTrafficAI: ✅ Nearest metro found: Mangalwar Peth (0.14 km)
+2026-02-22 05:42:21,731 [INFO] SmartVenueTrafficAI: 🌤️ Fetching weather for (18.5313127, 73.8657134)
+2026-02-22 05:42:22,377 [INFO] SmartVenueTrafficAI: ✅ Weather fetch successful: scattered clouds
+2026-02-22 05:42:22,379 [INFO] SmartVenueTrafficAI: Step 5: Fetching real-time traffic from Mappls...
+2026-02-22 05:42:22,379 [INFO] TrafficDataFetcher: 🚦 Fetching Mappls traffic for (18.5313127, 73.8657134)
+2026-02-22 05:42:22,380 [INFO] TrafficDataFetcher: 🔐 Requesting Mappls OAuth token...
+2026-02-22 05:42:22,834 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:42:23,304 [INFO] TrafficDataFetcher: ✅ Access Token obtained successfully.
+2026-02-22 05:42:24,233 [INFO] TrafficDataFetcher: ✅ Mappls Data: 4.31km, 8.5min, Congestion: LOW
+2026-02-22 05:42:24,237 [INFO] SmartVenueTrafficAI: Step 6: Saving result to records...
+2026-02-22 05:42:24,241 [INFO] SmartVenueTrafficAI: ✅ Analysis for 'AISSMS,Pune' recorded successfully.
+2026-02-22 05:42:33,273 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:42:39,049 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:42:41,039 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:42:43,562 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:42:53,888 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:42:59,852 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:43:01,730 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:43:04,287 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:43:13,640 [INFO] SmartVenueTrafficAI: 🚀 New analysis request received for venue: 'Wankhede Stadium,Mumbai'
+2026-02-22 05:43:13,641 [INFO] SmartVenueTrafficAI: Step 1: Geocoding...
+2026-02-22 05:43:13,641 [INFO] SmartVenueTrafficAI: 📍 Geocoding venue: Wankhede Stadium,Mumbai
+2026-02-22 05:43:14,589 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:43:15,191 [WARNING] SmartVenueTrafficAI: ⚠️ Geocoding returned no results for: Wankhede Stadium,Mumbai
+2026-02-22 05:43:15,194 [ERROR] SmartVenueTrafficAI: ❌ Could not geocode venue: 'Wankhede Stadium,Mumbai'
+2026-02-22 05:43:22,473 [INFO] SmartVenueTrafficAI: 🚀 New analysis request received for venue: 'Wankhede Stadium ,Mumbai'
+2026-02-22 05:43:22,474 [INFO] SmartVenueTrafficAI: Step 1: Geocoding...
+2026-02-22 05:43:22,474 [INFO] SmartVenueTrafficAI: 📍 Geocoding venue: Wankhede Stadium ,Mumbai
+2026-02-22 05:43:24,328 [WARNING] SmartVenueTrafficAI: ⚠️ Geocoding returned no results for: Wankhede Stadium ,Mumbai
+2026-02-22 05:43:24,330 [ERROR] SmartVenueTrafficAI: ❌ Could not geocode venue: 'Wankhede Stadium ,Mumbai'
+2026-02-22 05:43:25,045 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:43:32,039 [INFO] SmartVenueTrafficAI: 🚀 New analysis request received for venue: 'Wankhede Cricket Stadium ,Mumbai'
+2026-02-22 05:43:32,039 [INFO] SmartVenueTrafficAI: Step 1: Geocoding...
+2026-02-22 05:43:32,039 [INFO] SmartVenueTrafficAI: 📍 Geocoding venue: Wankhede Cricket Stadium ,Mumbai
+2026-02-22 05:43:33,441 [WARNING] SmartVenueTrafficAI: ⚠️ Geocoding returned no results for: Wankhede Cricket Stadium ,Mumbai
+2026-02-22 05:43:33,443 [ERROR] SmartVenueTrafficAI: ❌ Could not geocode venue: 'Wankhede Cricket Stadium ,Mumbai'
+2026-02-22 05:43:35,473 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:43:45,769 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:43:56,117 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:44:06,616 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:44:17,097 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:44:27,476 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:44:27,544 [INFO] SmartVenueTrafficAI: 🚀 New analysis request received for venue: 'DY Patil collage ,Mumbai'
+2026-02-22 05:44:27,551 [INFO] SmartVenueTrafficAI: Step 1: Geocoding...
+2026-02-22 05:44:27,564 [INFO] SmartVenueTrafficAI: 📍 Geocoding venue: DY Patil collage ,Mumbai
+2026-02-22 05:44:29,348 [WARNING] SmartVenueTrafficAI: ⚠️ Geocoding returned no results for: DY Patil collage ,Mumbai
+2026-02-22 05:44:29,350 [ERROR] SmartVenueTrafficAI: ❌ Could not geocode venue: 'DY Patil collage ,Mumbai'
+2026-02-22 05:44:37,946 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:44:41,393 [INFO] SmartVenueTrafficAI: 🚀 New analysis request received for venue: 'DY Patil collage Mumbai'
+2026-02-22 05:44:41,393 [INFO] SmartVenueTrafficAI: Step 1: Geocoding...
+2026-02-22 05:44:41,394 [INFO] SmartVenueTrafficAI: 📍 Geocoding venue: DY Patil collage Mumbai
+2026-02-22 05:44:42,689 [WARNING] SmartVenueTrafficAI: ⚠️ Geocoding returned no results for: DY Patil collage Mumbai
+2026-02-22 05:44:42,691 [ERROR] SmartVenueTrafficAI: ❌ Could not geocode venue: 'DY Patil collage Mumbai'
+2026-02-22 05:44:48,278 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:44:55,525 [INFO] SmartVenueTrafficAI: 🚀 New analysis request received for venue: 'VJTI, Mumbai'
+2026-02-22 05:44:55,526 [INFO] SmartVenueTrafficAI: Step 1: Geocoding...
+2026-02-22 05:44:55,526 [INFO] SmartVenueTrafficAI: 📍 Geocoding venue: VJTI, Mumbai
+2026-02-22 05:44:57,523 [WARNING] SmartVenueTrafficAI: ⚠️ Geocoding returned no results for: VJTI, Mumbai
+2026-02-22 05:44:57,526 [ERROR] SmartVenueTrafficAI: ❌ Could not geocode venue: 'VJTI, Mumbai'
+2026-02-22 05:44:58,598 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:45:08,910 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:45:13,442 [INFO] SmartVenueTrafficAI: 🚀 New analysis request received for venue: 'VIT,Pune'
+2026-02-22 05:45:13,443 [INFO] SmartVenueTrafficAI: Step 1: Geocoding...
+2026-02-22 05:45:13,443 [INFO] SmartVenueTrafficAI: 📍 Geocoding venue: VIT,Pune
+2026-02-22 05:45:14,685 [INFO] SmartVenueTrafficAI: ✅ Geocoding successful: (18.4637697, 73.8682067)
+2026-02-22 05:45:14,687 [INFO] SmartVenueTrafficAI: Step 2: Fetching live situational data...
+2026-02-22 05:45:14,688 [INFO] SmartVenueTrafficAI: 🌐 Starting live data fetch for venue: VIT,Pune
+2026-02-22 05:45:15,618 [INFO] SmartVenueTrafficAI: ✅ Live data fetch completed. Success: False
+2026-02-22 05:45:15,622 [INFO] SmartVenueTrafficAI: Step 3: Running AI Analysis...
+2026-02-22 05:45:15,622 [INFO] SmartVenueTrafficAI: 🧠 Prompting AI for traffic analysis of: VIT,Pune
+2026-02-22 05:45:17,478 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-22 05:45:19,222 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:45:19,232 [INFO] SmartVenueTrafficAI: ✅ AI Analysis complete for: VIT,Pune
+2026-02-22 05:45:19,232 [INFO] SmartVenueTrafficAI: Step 4: Fetching infrastructure and weather data...
+2026-02-22 05:45:19,233 [INFO] SmartVenueTrafficAI: 🚇 Fetching nearest metro station for (18.4637697, 73.8682067)
+2026-02-22 05:45:24,861 [ERROR] SmartVenueTrafficAI: ❌ Metro station fetch failed: Expecting value: line 1 column 1 (char 0)
+2026-02-22 05:45:24,864 [INFO] SmartVenueTrafficAI: 🌤️ Fetching weather for (18.4637697, 73.8682067)
+2026-02-22 05:45:25,686 [INFO] SmartVenueTrafficAI: ✅ Weather fetch successful: scattered clouds
+2026-02-22 05:45:25,689 [INFO] SmartVenueTrafficAI: Step 5: Fetching real-time traffic from Mappls...
+2026-02-22 05:45:25,689 [INFO] TrafficDataFetcher: 🚦 Fetching Mappls traffic for (18.4637697, 73.8682067)
+2026-02-22 05:45:25,689 [INFO] TrafficDataFetcher: 🔐 Requesting Mappls OAuth token...
+2026-02-22 05:45:26,655 [INFO] TrafficDataFetcher: ✅ Access Token obtained successfully.
+2026-02-22 05:45:27,552 [INFO] TrafficDataFetcher: ✅ Mappls Data: 5.84km, 11.7min, Congestion: LOW
+2026-02-22 05:45:27,554 [INFO] SmartVenueTrafficAI: Step 6: Saving result to records...
+2026-02-22 05:45:27,557 [INFO] SmartVenueTrafficAI: ✅ Analysis for 'VIT,Pune' recorded successfully.
+2026-02-22 05:45:29,581 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:45:36,551 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:45:39,912 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:45:50,456 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:46:00,984 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:46:11,537 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:46:21,875 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:46:32,344 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:46:42,669 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:46:53,011 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:47:03,329 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:47:13,727 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:47:24,144 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:47:33,776 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:47:34,588 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:47:44,917 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:47:55,227 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:48:02,537 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:48:04,116 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:48:05,566 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:48:15,972 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:48:26,303 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:48:36,613 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:48:47,105 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:48:57,415 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:49:07,729 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:49:18,594 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:49:29,087 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:49:39,446 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:49:49,883 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:50:10,382 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:50:12,467 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:50:17,115 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:50:17,678 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:50:19,575 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:50:26,889 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:50:39,907 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:50:42,508 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 409 Conflict"
+2026-02-22 05:50:42,509 [ERROR] telegram.ext.Application: No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "E:\hackathon\aissms\flux-fastapi\.venv\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "E:\hackathon\aissms\flux-fastapi\.venv\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\hackathon\aissms\flux-fastapi\.venv\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\hackathon\aissms\flux-fastapi\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 671, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "E:\hackathon\aissms\flux-fastapi\.venv\Lib\site-packages\telegram\_bot.py", line 4860, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "E:\hackathon\aissms\flux-fastapi\.venv\Lib\site-packages\telegram\_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "E:\hackathon\aissms\flux-fastapi\.venv\Lib\site-packages\telegram\ext\_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "E:\hackathon\aissms\flux-fastapi\.venv\Lib\site-packages\telegram\_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "E:\hackathon\aissms\flux-fastapi\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\hackathon\aissms\flux-fastapi\.venv\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-02-22 05:50:52,619 [INFO] SmartVenueTrafficAI: 🚀 New analysis request received for venue: 'Wankhede stadium,Mumbai'
+2026-02-22 05:50:52,619 [INFO] SmartVenueTrafficAI: Step 1: Geocoding...
+2026-02-22 05:50:52,619 [INFO] SmartVenueTrafficAI: 📍 Geocoding venue: Wankhede stadium,Mumbai
+2026-02-22 05:50:53,847 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:50:54,833 [INFO] SmartVenueTrafficAI: ✅ Geocoding successful: (18.9385497, 72.8257408)
+2026-02-22 05:50:54,835 [INFO] SmartVenueTrafficAI: Step 2: Fetching live situational data...
+2026-02-22 05:50:54,836 [INFO] SmartVenueTrafficAI: 🌐 Starting live data fetch for venue: Wankhede stadium,Mumbai
+2026-02-22 05:50:55,663 [INFO] SmartVenueTrafficAI: ✅ Live data fetch completed. Success: False
+2026-02-22 05:50:55,693 [INFO] SmartVenueTrafficAI: Step 3: Running AI Analysis...
+2026-02-22 05:50:55,693 [INFO] SmartVenueTrafficAI: 🧠 Prompting AI for traffic analysis of: Wankhede stadium,Mumbai
+2026-02-22 05:50:57,805 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-22 05:50:59,122 [INFO] SmartVenueTrafficAI: ✅ AI Analysis complete for: Wankhede stadium,Mumbai
+2026-02-22 05:50:59,122 [INFO] SmartVenueTrafficAI: Step 4: Fetching infrastructure and weather data...
+2026-02-22 05:50:59,122 [INFO] SmartVenueTrafficAI: 🚇 Fetching nearest metro station for (18.9385497, 72.8257408)
+2026-02-22 05:51:04,430 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:51:10,605 [INFO] SmartVenueTrafficAI: ✅ Nearest metro found: Unknown Station (0.62 km)
+2026-02-22 05:51:10,607 [INFO] SmartVenueTrafficAI: 🌤️ Fetching weather for (18.9385497, 72.8257408)
+2026-02-22 05:51:11,332 [INFO] SmartVenueTrafficAI: ✅ Weather fetch successful: clear sky
+2026-02-22 05:51:11,334 [INFO] SmartVenueTrafficAI: Step 5: Fetching real-time traffic from Mappls...
+2026-02-22 05:51:11,335 [INFO] TrafficDataFetcher: 🚦 Fetching Mappls traffic for (18.9385497, 72.8257408)
+2026-02-22 05:51:11,335 [INFO] TrafficDataFetcher: 🔐 Requesting Mappls OAuth token...
+2026-02-22 05:51:12,397 [INFO] TrafficDataFetcher: ✅ Access Token obtained successfully.
+2026-02-22 05:51:13,522 [INFO] TrafficDataFetcher: ✅ Mappls Data: 5.65km, 11.5min, Congestion: LOW
+2026-02-22 05:51:13,524 [INFO] SmartVenueTrafficAI: Step 6: Saving result to records...
+2026-02-22 05:51:13,528 [INFO] SmartVenueTrafficAI: ✅ Analysis for 'Wankhede stadium,Mumbai' recorded successfully.
+2026-02-22 05:51:15,097 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:51:25,488 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:51:35,819 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:51:46,323 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:51:56,643 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:52:07,278 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:52:27,278 [WARNING] TelegramTrafficBot: 停止: Bot manually interrupted.
+2026-02-22 05:52:27,278 [INFO] TelegramTrafficBot: 💤 Bot shutdown complete.
+2026-02-22 05:52:33,873 [INFO] TelegramTrafficBot: 🚀 Launching Smart Traffic Professional Telegram Bot...
+2026-02-22 05:52:34,587 [INFO] TelegramTrafficBot: ⚙️ Bot is polling for updates...
+2026-02-22 05:52:36,058 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getMe "HTTP/1.1 200 OK"
+2026-02-22 05:52:36,373 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/deleteWebhook "HTTP/1.1 200 OK"
+2026-02-22 05:52:36,375 [INFO] telegram.ext.Application: Application started
+2026-02-22 05:52:47,605 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:52:48,236 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:52:48,237 [INFO] TelegramTrafficBot: 👋 User None (ID: 6153767622) started the bot.
+2026-02-22 05:52:49,588 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendMessage "HTTP/1.1 200 OK"
+2026-02-22 05:52:52,278 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:52:52,742 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:52:53,216 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:53:02,654 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:53:12,966 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:53:13,442 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:53:13,443 [INFO] TelegramTrafficBot: 💬 CUSTOM QUERY from None: Tell me the traffic for pccoe pune today...
+2026-02-22 05:53:14,439 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendChatAction "HTTP/1.1 200 OK"
+2026-02-22 05:53:14,440 [INFO] TelegramTrafficBot: 📚 Loading RAG context from JSON files...
+2026-02-22 05:53:14,442 [INFO] TelegramTrafficBot: ✅ RAG context loaded. Size: 12725 bytes.
+2026-02-22 05:53:14,442 [INFO] TelegramTrafficBot: 🤖 Querying OpenRouter (Model: google/gemini-2.0-flash-001)...
+2026-02-22 05:53:16,369 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-22 05:53:16,378 [INFO] TelegramTrafficBot: ✅ AI query successful.
+2026-02-22 05:53:16,378 [INFO] TelegramTrafficBot: 🔍 AI detected missing data for: Exact Name of the Venue. Triggering backend analysis...
+2026-02-22 05:53:16,847 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendMessage "HTTP/1.1 200 OK"
+2026-02-22 05:53:18,913 [INFO] SmartVenueTrafficAI: 🚀 New analysis request received for venue: 'Exact Name of the Venue'
+2026-02-22 05:53:18,914 [INFO] SmartVenueTrafficAI: Step 1: Geocoding...
+2026-02-22 05:53:18,914 [INFO] SmartVenueTrafficAI: 📍 Geocoding venue: Exact Name of the Venue
+2026-02-22 05:53:21,097 [WARNING] SmartVenueTrafficAI: ⚠️ Geocoding returned no results for: Exact Name of the Venue
+2026-02-22 05:53:21,100 [ERROR] SmartVenueTrafficAI: ❌ Could not geocode venue: 'Exact Name of the Venue'
+2026-02-22 05:53:21,635 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendMessage "HTTP/1.1 200 OK"
+2026-02-22 05:53:23,876 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:53:34,354 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:53:44,688 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:53:55,206 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:54:05,545 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:54:16,000 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:54:26,545 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:54:31,082 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:54:31,083 [INFO] telegram.ext.Application: Application is stopping. This might take a moment.
+2026-02-22 05:54:31,083 [INFO] telegram.ext.Application: Application.stop() complete
+2026-02-22 05:54:31,084 [INFO] TelegramTrafficBot: 💤 Bot shutdown complete.
+2026-02-22 05:55:46,645 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:55:55,044 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:56:10,732 [INFO] TelegramTrafficBot: 🚀 Launching Smart Traffic Professional Telegram Bot...
+2026-02-22 05:56:11,548 [INFO] TelegramTrafficBot: ⚙️ Bot is polling for updates...
+2026-02-22 05:56:14,748 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getMe "HTTP/1.1 200 OK"
+2026-02-22 05:56:15,194 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/deleteWebhook "HTTP/1.1 200 OK"
+2026-02-22 05:56:15,196 [INFO] telegram.ext.Application: Application started
+2026-02-22 05:56:18,579 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:56:18,581 [INFO] TelegramTrafficBot: 👋 User None (ID: 6153767622) started the bot.
+2026-02-22 05:56:19,417 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendMessage "HTTP/1.1 200 OK"
+2026-02-22 05:56:21,161 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:56:21,626 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:56:22,162 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:56:26,152 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:56:26,153 [INFO] TelegramTrafficBot: 💬 CUSTOM QUERY from None: Tell me the traffic for pccoe pune today...
+2026-02-22 05:56:26,648 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendChatAction "HTTP/1.1 200 OK"
+2026-02-22 05:56:26,649 [INFO] TelegramTrafficBot: 📚 Loading RAG context from JSON files...
+2026-02-22 05:56:26,651 [INFO] TelegramTrafficBot: ✅ RAG context loaded. Size: 12725 bytes.
+2026-02-22 05:56:26,651 [INFO] TelegramTrafficBot: 🤖 Querying OpenRouter (Model: google/gemini-2.0-flash-001)...
+2026-02-22 05:56:28,521 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-22 05:56:28,529 [INFO] TelegramTrafficBot: ✅ AI query successful.
+2026-02-22 05:56:28,529 [INFO] TelegramTrafficBot: 🔍 AI detected missing data for: PCCOE Pune. Triggering backend analysis...
+2026-02-22 05:56:29,004 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendMessage "HTTP/1.1 200 OK"
+2026-02-22 05:56:31,070 [INFO] SmartVenueTrafficAI: 🚀 New analysis request received for venue: 'PCCOE Pune'
+2026-02-22 05:56:31,070 [INFO] SmartVenueTrafficAI: Step 1: Geocoding...
+2026-02-22 05:56:31,071 [INFO] SmartVenueTrafficAI: 📍 Geocoding venue: PCCOE Pune
+2026-02-22 05:56:32,822 [INFO] SmartVenueTrafficAI: ✅ Geocoding successful: (18.652089, 73.7619541)
+2026-02-22 05:56:32,825 [INFO] SmartVenueTrafficAI: Step 2: Fetching live situational data...
+2026-02-22 05:56:32,825 [INFO] SmartVenueTrafficAI: 🌐 Starting live data fetch for venue: PCCOE Pune
+2026-02-22 05:56:33,605 [INFO] SmartVenueTrafficAI: ✅ Live data fetch completed. Success: False
+2026-02-22 05:56:33,608 [INFO] SmartVenueTrafficAI: Step 3: Running AI Analysis...
+2026-02-22 05:56:33,608 [INFO] SmartVenueTrafficAI: 🧠 Prompting AI for traffic analysis of: PCCOE Pune
+2026-02-22 05:56:35,261 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-22 05:56:36,675 [INFO] SmartVenueTrafficAI: ✅ AI Analysis complete for: PCCOE Pune
+2026-02-22 05:56:36,676 [INFO] SmartVenueTrafficAI: Step 4: Fetching infrastructure and weather data...
+2026-02-22 05:56:36,676 [INFO] SmartVenueTrafficAI: 🚇 Fetching nearest metro station for (18.652089, 73.7619541)
+2026-02-22 05:56:43,547 [ERROR] SmartVenueTrafficAI: ❌ Metro station fetch failed: Expecting value: line 1 column 1 (char 0)
+2026-02-22 05:56:43,549 [INFO] SmartVenueTrafficAI: 🌤️ Fetching weather for (18.652089, 73.7619541)
+2026-02-22 05:56:44,256 [INFO] SmartVenueTrafficAI: ✅ Weather fetch successful: few clouds
+2026-02-22 05:56:44,260 [INFO] SmartVenueTrafficAI: Step 5: Fetching real-time traffic from Mappls...
+2026-02-22 05:56:44,260 [INFO] TrafficDataFetcher: 🚦 Fetching Mappls traffic for (18.652089, 73.7619541)
+2026-02-22 05:56:44,260 [INFO] TrafficDataFetcher: 🔐 Requesting Mappls OAuth token...
+2026-02-22 05:56:45,146 [INFO] TrafficDataFetcher: ✅ Access Token obtained successfully.
+2026-02-22 05:56:46,061 [INFO] TrafficDataFetcher: ✅ Mappls Data: 4.02km, 9.1min, Congestion: LOW
+2026-02-22 05:56:46,063 [INFO] SmartVenueTrafficAI: Step 6: Saving result to records...
+2026-02-22 05:56:46,067 [INFO] SmartVenueTrafficAI: ✅ Analysis for 'PCCOE Pune' recorded successfully.
+2026-02-22 05:56:46,069 [INFO] TelegramTrafficBot: ✅ Backend analysis successful. Re-querying AI with new data.
+2026-02-22 05:56:46,070 [INFO] TelegramTrafficBot: 📚 Loading RAG context from JSON files...
+2026-02-22 05:56:46,072 [INFO] TelegramTrafficBot: ✅ RAG context loaded. Size: 14542 bytes.
+2026-02-22 05:56:46,072 [INFO] TelegramTrafficBot: 🤖 Querying OpenRouter (Model: google/gemini-2.0-flash-001)...
+2026-02-22 05:56:47,594 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-22 05:56:47,863 [INFO] TelegramTrafficBot: ✅ AI query successful.
+2026-02-22 05:56:47,865 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:56:49,147 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendMessage "HTTP/1.1 200 OK"
+2026-02-22 05:56:58,169 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:57:08,508 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:57:18,999 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:57:23,254 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:57:29,308 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:57:39,614 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:57:40,438 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:57:43,165 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:57:43,166 [INFO] telegram.ext.Application: Application is stopping. This might take a moment.
+2026-02-22 05:57:43,166 [INFO] telegram.ext.Application: Application.stop() complete
+2026-02-22 05:57:43,167 [INFO] TelegramTrafficBot: 💤 Bot shutdown complete.
+2026-02-22 05:57:52,263 [INFO] TelegramTrafficBot: 🚀 Launching Smart Traffic Professional Telegram Bot...
+2026-02-22 05:57:52,890 [INFO] TelegramTrafficBot: ⚙️ Bot is polling for updates...
+2026-02-22 05:57:54,013 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getMe "HTTP/1.1 200 OK"
+2026-02-22 05:57:54,317 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/deleteWebhook "HTTP/1.1 200 OK"
+2026-02-22 05:57:54,319 [INFO] telegram.ext.Application: Application started
+2026-02-22 05:57:55,537 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:57:55,538 [INFO] TelegramTrafficBot: 👋 User None (ID: 6153767622) started the bot.
+2026-02-22 05:57:56,081 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendMessage "HTTP/1.1 200 OK"
+2026-02-22 05:57:57,597 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:57:58,087 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:57:58,557 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:58:07,964 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:58:13,981 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:58:13,982 [INFO] TelegramTrafficBot: 💬 CUSTOM QUERY from None: Tell me the traffic for MIT ADT pune today...
+2026-02-22 05:58:15,165 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendChatAction "HTTP/1.1 200 OK"
+2026-02-22 05:58:15,166 [INFO] TelegramTrafficBot: 📚 Loading RAG context from JSON files...
+2026-02-22 05:58:15,167 [INFO] TelegramTrafficBot: ✅ RAG context loaded. Size: 14542 bytes.
+2026-02-22 05:58:15,167 [INFO] TelegramTrafficBot: 🤖 Querying OpenRouter (Model: google/gemini-2.0-flash-001)...
+2026-02-22 05:58:17,246 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-22 05:58:17,255 [INFO] TelegramTrafficBot: ✅ AI query successful.
+2026-02-22 05:58:17,255 [INFO] TelegramTrafficBot: 🔍 AI detected missing data for: MIT ADT pune. Triggering backend analysis...
+2026-02-22 05:58:19,298 [INFO] SmartVenueTrafficAI: 🚀 New analysis request received for venue: 'MIT ADT pune'
+2026-02-22 05:58:19,298 [INFO] SmartVenueTrafficAI: Step 1: Geocoding...
+2026-02-22 05:58:19,299 [INFO] SmartVenueTrafficAI: 📍 Geocoding venue: MIT ADT pune
+2026-02-22 05:58:20,812 [WARNING] SmartVenueTrafficAI: ⚠️ Geocoding returned no results for: MIT ADT pune
+2026-02-22 05:58:20,815 [ERROR] SmartVenueTrafficAI: ❌ Could not geocode venue: 'MIT ADT pune'
+2026-02-22 05:58:21,901 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendMessage "HTTP/1.1 200 OK"
+2026-02-22 05:58:24,357 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:58:31,332 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:58:32,393 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-22 05:58:32,828 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/editMessageText "HTTP/1.1 200 OK"
+2026-02-22 05:58:41,641 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:58:42,130 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:58:42,131 [INFO] TelegramTrafficBot: 💬 CUSTOM QUERY from None: Tell me the traffic for MIT pune today...
+2026-02-22 05:58:43,389 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendChatAction "HTTP/1.1 200 OK"
+2026-02-22 05:58:43,391 [INFO] TelegramTrafficBot: 📚 Loading RAG context from JSON files...
+2026-02-22 05:58:43,392 [INFO] TelegramTrafficBot: ✅ RAG context loaded. Size: 14542 bytes.
+2026-02-22 05:58:43,392 [INFO] TelegramTrafficBot: 🤖 Querying OpenRouter (Model: google/gemini-2.0-flash-001)...
+2026-02-22 05:58:45,204 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-22 05:58:45,206 [INFO] TelegramTrafficBot: ✅ AI query successful.
+2026-02-22 05:58:45,206 [INFO] TelegramTrafficBot: 🔍 AI detected missing data for: MIT pune. Triggering backend analysis...
+2026-02-22 05:58:47,238 [INFO] SmartVenueTrafficAI: 🚀 New analysis request received for venue: 'MIT pune'
+2026-02-22 05:58:47,238 [INFO] SmartVenueTrafficAI: Step 1: Geocoding...
+2026-02-22 05:58:47,239 [INFO] SmartVenueTrafficAI: 📍 Geocoding venue: MIT pune
+2026-02-22 05:58:48,792 [INFO] SmartVenueTrafficAI: ✅ Geocoding successful: (18.5160175, 73.8156554)
+2026-02-22 05:58:48,794 [INFO] SmartVenueTrafficAI: Step 2: Fetching live situational data...
+2026-02-22 05:58:48,794 [INFO] SmartVenueTrafficAI: 🌐 Starting live data fetch for venue: MIT pune
+2026-02-22 05:58:49,568 [INFO] SmartVenueTrafficAI: ✅ Live data fetch completed. Success: False
+2026-02-22 05:58:49,570 [INFO] SmartVenueTrafficAI: Step 3: Running AI Analysis...
+2026-02-22 05:58:49,570 [INFO] SmartVenueTrafficAI: 🧠 Prompting AI for traffic analysis of: MIT pune
+2026-02-22 05:58:51,491 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-22 05:58:53,260 [INFO] SmartVenueTrafficAI: ✅ AI Analysis complete for: MIT pune
+2026-02-22 05:58:53,261 [INFO] SmartVenueTrafficAI: Step 4: Fetching infrastructure and weather data...
+2026-02-22 05:58:53,261 [INFO] SmartVenueTrafficAI: 🚇 Fetching nearest metro station for (18.5160175, 73.8156554)
+2026-02-22 05:58:55,171 [INFO] SmartVenueTrafficAI: ✅ Nearest metro found: Anandnagar (0.72 km)
+2026-02-22 05:58:55,174 [INFO] SmartVenueTrafficAI: 🌤️ Fetching weather for (18.5160175, 73.8156554)
+2026-02-22 05:58:55,856 [INFO] SmartVenueTrafficAI: ✅ Weather fetch successful: scattered clouds
+2026-02-22 05:58:55,858 [INFO] SmartVenueTrafficAI: Step 5: Fetching real-time traffic from Mappls...
+2026-02-22 05:58:55,858 [INFO] TrafficDataFetcher: 🚦 Fetching Mappls traffic for (18.5160175, 73.8156554)
+2026-02-22 05:58:55,858 [INFO] TrafficDataFetcher: 🔐 Requesting Mappls OAuth token...
+2026-02-22 05:58:56,920 [INFO] TrafficDataFetcher: ✅ Access Token obtained successfully.
+2026-02-22 05:58:57,959 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:58:58,218 [INFO] TrafficDataFetcher: ✅ Mappls Data: 7.52km, 13.4min, Congestion: LOW
+2026-02-22 05:58:58,219 [INFO] SmartVenueTrafficAI: Step 6: Saving result to records...
+2026-02-22 05:58:58,222 [INFO] SmartVenueTrafficAI: ✅ Analysis for 'MIT pune' recorded successfully.
+2026-02-22 05:58:58,223 [INFO] TelegramTrafficBot: ✅ Backend analysis successful. Re-querying AI with new data.
+2026-02-22 05:58:58,223 [INFO] TelegramTrafficBot: 📚 Loading RAG context from JSON files...
+2026-02-22 05:58:58,224 [INFO] TelegramTrafficBot: ✅ RAG context loaded. Size: 16504 bytes.
+2026-02-22 05:58:58,225 [INFO] TelegramTrafficBot: 🤖 Querying OpenRouter (Model: google/gemini-2.0-flash-001)...
+2026-02-22 05:58:59,384 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-22 05:58:59,543 [INFO] SmartVenueTrafficAI: Initializing Smart Venue Traffic Intelligence API...
+2026-02-22 05:59:00,233 [INFO] TelegramTrafficBot: ✅ AI query successful.
+2026-02-22 05:59:00,235 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
+2026-02-22 05:59:01,476 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/sendMessage "HTTP/1.1 200 OK"
+2026-02-22 05:59:10,531 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8380243003:AAFbM5mD9OTOWC9YbTuI6bc7_O2lySKlS-8/getUpdates "HTTP/1.1 200 OK"
