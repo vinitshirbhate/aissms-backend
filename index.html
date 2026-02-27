@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Smart Traffic Rerouting | Pune</title>
+
+  <!-- Mappls SDK -->
+  <script
+    src="https://apis.mappls.com/advancedmaps/api/filfxcpejbchzmbazzqzmvfpwcvsmnavdyts/map_sdk?layer=vector&v=3.0"></script>
+  <script
+    src="https://apis.mappls.com/advancedmaps/api/filfxcpejbchzmbazzqzmvfpwcvsmnavdyts/map_sdk_plugins?v=3.0"></script>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #3b82f6;
+      --accent: #f43f5e;
+      --bg-dark: #0f172a;
+      --card-bg: rgba(30, 41, 59, 0.7);
+      --text-main: #f8fafc;
+      --text-dim: #94a3b8;
+    }
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      overflow: hidden;
+    }
+
+    #app-container {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #sidebar {
+      width: 400px;
+      height: 100%;
+      background: var(--bg-dark);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-direction: column;
+      z-index: 10;
+      box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .sidebar-header {
+      padding: 24px;
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .sidebar-header h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      margin: 0;
+      background: linear-gradient(to right, #60a5fa, #f43f5e);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .sidebar-header p {
+      font-size: 12px;
+      color: var(--text-dim);
+      margin: 4px 0 0 0;
+    }
+
+    .content-area {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      scrollbar-width: thin;
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .card-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--primary);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+    }
+
+    .severity-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .severity-high {
+      background: rgba(244, 63, 94, 0.2);
+      color: #fb7185;
+      border: 1px solid rgba(244, 63, 94, 0.3);
+    }
+
+    .severity-mod {
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .severity-low {
+      background: rgba(34, 197, 94, 0.2);
+      color: #4ade80;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .stat-item {
+      background: rgba(15, 23, 42, 0.5);
+      padding: 12px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .stat-label {
+      font-size: 10px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+    }
+
+    .road-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .road-item {
+      padding: 8px 12px;
+      background: rgba(244, 63, 94, 0.1);
+      border-left: 3px solid var(--accent);
+      margin-bottom: 6px;
+      font-size: 13px;
+      border-radius: 4px;
+    }
+
+    .suggested-item {
+      padding: 8px 12px;
+      background: rgba(34, 197, 94, 0.1);
+      border-left: 3px solid #22c55e;
+      margin-bottom: 6px;
+      font-size: 13px;
+      border-radius: 4px;
+    }
+
+    #map-container {
+      flex: 1;
+      position: relative;
+    }
+
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+
+    .map-controls {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .control-btn {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s;
+    }
+
+    .control-btn:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .control-btn.active {
+      background: var(--primary);
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+    }
+
+    #reroute-badge {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      padding: 12px 24px;
+      border-radius: 99px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      box-shadow: 0 10px 30px rgba(244, 63, 94, 0.4);
+      display: none;
+      animation: pulse-red 2s infinite;
+    }
+
+    @keyframes pulse-red {
+      0% {
+        transform: translateX(-50%) scale(1);
+      }
+
+      50% {
+        transform: translateX(-50%) scale(1.05);
+      }
+
+      100% {
+        transform: translateX(-50%) scale(1);
+      }
+    }
+
+    .loading-overlay {
+      position: absolute;
+      inset: 0;
+      background: var(--bg-dark);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+      transition: opacity 0.5s;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid rgba(255, 255, 255, 0.1);
+      border-top: 4px solid var(--primary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="app-container">
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <h1>Traffic Control AI</h1>
+        <p id="venue-name">Detecting Venue...</p>
+      </div>
+
+      <div class="content-area">
+        <div class="card">
+          <div class="card-title">🚨 Real-time Prediction</div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <span id="severity-badge" class="severity-badge">Normal</span>
+            <span id="congestion-idx" style="font-size: 24px; font-weight: 800; color: #fff;">0%</span>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <div id="peak-start" class="stat-value">--:--</div>
+              <div class="stat-label">Peak Start</div>
+            </div>
+            <div class="stat-item">
+              <div id="peak-end" class="stat-value">--:--</div>
+              <div class="stat-label">Peak End</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">🚫 Roads to Avoid</div>
+          <div id="avoid-roads" class="road-list"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">✅ AI Re-routing</div>
+          <div id="suggested-routes" class="road-list"></div>
+        </div>
+
+        <div id="advisory-card" class="card" style="border-left: 4px solid var(--primary);">
+          <div class="card-title">ℹ️ Official Advisory</div>
+          <p id="advisory-text" style="font-size: 13px; line-height: 1.6; color: var(--text-dim); margin: 0;">
+            Synchronizing status...
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <main id="map-container">
+      <div id="map"></div>
+      <div class="map-controls">
+        <button class="control-btn" id="toggle-traffic">🚦 Live Traffic</button>
+        <button class="control-btn" id="toggle-impact">⭕ Impact Zones</button>
+        <button class="control-btn active" id="btn-reroute">🧠 Smart Reroute</button>
+      </div>
+      <div id="reroute-badge">AI REROUTING ACTIVE</div>
+    </main>
+  </div>
+
+  <div class="loading-overlay" id="loader">
+    <div style="text-align: center;">
+      <div class="spinner"></div>
+      <p style="margin-top: 20px; font-family: 'Outfit'; letter-spacing: 2px;">CONNECTING TO TRAFFIC ENGINE...</p>
+    </div>
+  </div>
+
+  <script>
+    // Configuration
+    const BACKEND_URL = 'http://localhost:8000'; // Change to real IP if needed
+    let map, directionPlugin, altDirectionPlugin;
+    let trafficOn = false;
+    let impactOn = true;
+    let currentData = null;
+
+    const COORDS = {
+      venue: [18.5313, 73.8657],
+      ghole_road: [18.524, 73.847],
+      origin: [18.5513, 73.8657],
+      destination: [18.5013, 73.8457]
+    };
+
+    // Helper to wait for Mappls SDK
+    function waitMappls() {
+      return new Promise((resolve, reject) => {
+        const check = () => {
+          if (typeof mappls !== 'undefined') resolve();
+          else setTimeout(check, 100);
+        };
+        check();
+        setTimeout(() => reject('Mappls timeout'), 10000);
+      });
+    }
+
+    window.onload = async () => {
+      try {
+        await waitMappls();
+        await fetchData();
+        initMap();
+      } catch (e) {
+        console.error("Initialization error:", e);
+        document.getElementById('advisory-text').innerText = "Critical error: Mappls SDK not loaded.";
+      }
+
+      setTimeout(() => {
+        document.getElementById('loader').style.opacity = '0';
+        setTimeout(() => document.getElementById('loader').style.display = 'none', 500);
+      }, 800);
+    };
+
+    async function fetchData() {
+      try {
+        // Force fetch from the absolute backend URL to fix 404 on Live Server
+        const response = await fetch(`${BACKEND_URL}/outputs`);
+        const outputs = await response.json();
+        if (outputs && outputs.length > 0) {
+          const decision = outputs[outputs.length - 1];
+          currentData = {
+            venue: { name: "AISSMS Campus Area" },
+            traffic_prediction: {
+              severity: (decision.priority_level || 'Normal').toUpperCase(),
+              congestion_index: (decision.risk_assessment?.choke_probability || 0) * 100,
+              peak_period: { start: "Ongoing", end: "Next 1h" }
+            },
+            recommendations: {
+              avoid_roads: (decision.signal_actions || []).map(s => s.junction_area),
+              suggested_routes: (decision.public_advisories || []),
+              commuter_tip: decision.decision_summary || "Traffic conditions are normal.",
+              waypoints: (decision.suggested_reroute_waypoints || []).map(w => [w.lat, w.lon])
+            }
+          };
+        }
+      } catch (e) {
+        console.warn("Backend unavailable, using local fallback.");
+        currentData = {
+          venue: { name: "AISSMS Campus, Pune" },
+          traffic_prediction: { severity: "HIGH", congestion_index: 85, peak_period: { start: "08:30 PM", end: "09:30 PM" } },
+          recommendations: {
+            avoid_roads: ["Kennedy Road", "RTO Junction"],
+            suggested_routes: ["Use Ghole Road to bypass congestion", "Check Pune Metro Aqua Line"],
+            commuter_tip: "Severe congestion near RTO. AI recommends bypassing via Ghole Road.",
+            waypoints: [COORDS.ghole_road]
+          }
+        };
+      }
+      updateUI(currentData);
+    }
+
+    function initMap() {
+      map = new mappls.Map("map", {
+        center: COORDS.venue,
+        zoom: 14,
+        style: 'standard-dark'
+      });
+
+      map.addListener('load', () => {
+        new mappls.Marker({ map: map, position: COORDS.venue, popupHtml: `<b>${currentData.venue.name}</b>` });
+        new mappls.Circle({
+          map: map, center: COORDS.venue, radius: 500,
+          fillColor: "#f43f5e", fillOpacity: 0.2, strokeColor: "#f43f5e", strokeWeight: 2
+        });
+        calculateRoutes();
+      });
+    }
+
+    function calculateRoutes() {
+      directionPlugin = new mappls.Direction({
+        map: map, start: COORDS.origin, end: COORDS.destination,
+        profile: "driving", traffic: true, strokeWeight: 8, strokeColor: "#64748b"
+      });
+
+      const waypoints = currentData.recommendations.waypoints && currentData.recommendations.waypoints.length > 0
+        ? currentData.recommendations.waypoints : [COORDS.ghole_road];
+
+      altDirectionPlugin = new mappls.Direction({
+        map: map, start: COORDS.origin, end: COORDS.destination,
+        via: waypoints, profile: "driving", traffic: true,
+        strokeWeight: 6, strokeColor: "#3b82f6",
+        callback: () => {
+          const sev = currentData.traffic_prediction.severity;
+          if (sev.includes('HIGH') || sev.includes('CRITICAL')) {
+            document.getElementById('reroute-badge').style.display = 'block';
+          }
+        }
+      });
+    }
+
+    function updateUI(d) {
+      if (!d) return;
+      document.getElementById('venue-name').innerText = d.venue.name;
+      document.getElementById('congestion-idx').innerText = Math.round(d.traffic_prediction.congestion_index) + '%';
+      const badge = document.getElementById('severity-badge');
+      const sev = d.traffic_prediction.severity.toLowerCase();
+      badge.innerText = d.traffic_prediction.severity;
+      badge.className = 'severity-badge ' + (sev.includes('high') || sev.includes('crit') ? 'severity-high' : sev.includes('mod') ? 'severity-mod' : 'severity-low');
+      document.getElementById('peak-start').innerText = d.traffic_prediction.peak_period.start;
+      document.getElementById('peak-end').innerText = d.traffic_prediction.peak_period.end;
+      document.getElementById('avoid-roads').innerHTML = (d.recommendations.avoid_roads.length ? d.recommendations.avoid_roads : ["None"]).map(r => `<div class="road-item">⚠️ ${r}</div>`).join('');
+      document.getElementById('suggested-routes').innerHTML = (d.recommendations.suggested_routes.length ? d.recommendations.suggested_routes : ["Maintain route"]).map(r => `<div class="suggested-item">🛡️ ${r}</div>`).join('');
+      document.getElementById('advisory-text').innerText = d.recommendations.commuter_tip;
+    }
+
+    document.getElementById('toggle-traffic').onclick = function () {
+      trafficOn = !trafficOn;
+      this.classList.toggle('active');
+      if (trafficOn) map.addTraffic(); else map.removeTraffic();
+    };
+
+    document.getElementById('btn-reroute').onclick = function () {
+      if (directionPlugin) directionPlugin.remove();
+      if (altDirectionPlugin) altDirectionPlugin.remove();
+      calculateRoutes();
+    };
+  </script>
+
+</body>
+
+</html>

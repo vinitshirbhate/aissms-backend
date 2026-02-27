@@ -1,272 +1,6 @@
 [
     {
         "venue": {
-            "name": "VIT,Pune",
-            "type": "college",
-            "capacity": "4,000"
-        },
-        "event_context": {
-            "likely_event_today": "Alacrity Fest Day 3, National Coding Challenge 2026",
-            "date": "22 February 2026",
-            "estimated_attendance": "3,500"
-        },
-        "traffic_prediction": {
-            "severity": "MODERATE",
-            "congestion_index": 65,
-            "confidence": 70,
-            "peak_period": {
-                "start": "04:00 PM",
-                "end": "06:30 PM",
-                "label": "4:00 PM \u2013 6:30 PM",
-                "description": "Student departure after events causes congestion."
-            }
-        },
-        "impact_zones": [
-            {
-                "radius": "0\u2013500m",
-                "level": 2,
-                "roads_affected": "Bibwewadi Road, near VIT Pune"
-            },
-            {
-                "radius": "500m\u20132km",
-                "level": 1,
-                "roads_affected": "Lullanagar Chowk, Kondhwa Road"
-            }
-        ],
-        "location": {
-            "latitude": 18.4637697,
-            "longitude": 73.8682067,
-            "google_maps_link": "https://www.google.com/maps?q=18.4637697,73.8682067"
-        },
-        "nearest_metro_station": {
-            "station_name": "Unknown Station",
-            "distance_km": 4.11,
-            "walking_time_mins": 51,
-            "auto_time_mins": 8,
-            "lat": 18.4994278,
-            "lon": 73.8578411,
-            "osm_id": 13392139824,
-            "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=18.4994278,73.8578411"
-        },
-        "weather": {
-            "condition": "Few Clouds",
-            "temperature_c": 23.24,
-            "feels_like_c": 22.87,
-            "humidity_percent": 48,
-            "wind_speed_kmh": 5.1,
-            "wind_direction_deg": 258,
-            "visibility_km": 10.0,
-            "cloud_cover_percent": 18,
-            "rain_last_1h_mm": 0,
-            "traffic_weather_impact": "LOW \u2014 Weather conditions are favorable for travel"
-        },
-        "mappls_live_traffic": {
-            "Distance (km)": 5.84,
-            "Travel Time (min)": 11.7,
-            "Traffic Delay (min)": 0,
-            "Average Speed (km/h)": 30.0,
-            "Congestion Level": "LOW"
-        }
-    },
-    {
-        "venue": {
-            "name": "AISSMS,Pune",
-            "type": "college",
-            "capacity": "5,000"
-        },
-        "event_context": {
-            "likely_event_today": "Techathon Innovation 3.0, Alacrity Fest Day 3",
-            "date": "22 February 2026",
-            "estimated_attendance": "2,000"
-        },
-        "traffic_prediction": {
-            "severity": "LOW",
-            "congestion_index": 35,
-            "confidence": 65,
-            "peak_period": {
-                "start": "10:00",
-                "end": "11:30",
-                "label": "10:00 AM \u2013 11:30 AM",
-                "description": "Morning arrival of students and faculty."
-            }
-        },
-        "impact_zones": [
-            {
-                "radius": "0\u2013500m",
-                "level": 2,
-                "roads_affected": "Kennedy Road, Elphinstone Road"
-            },
-            {
-                "radius": "500m\u20132km",
-                "level": 1,
-                "roads_affected": "Raja Bahadur Motilal Road, Ambedkar Road"
-            }
-        ],
-        "location": {
-            "latitude": 18.5313127,
-            "longitude": 73.8657134,
-            "google_maps_link": "https://www.google.com/maps?q=18.5313127,73.8657134"
-        },
-        "nearest_metro_station": {
-            "station_name": "Metro lookup failed",
-            "error": "Expecting value: line 1 column 1 (char 0)",
-            "note": "Check https://punemetrorail.org for latest station info"
-        },
-        "weather": {
-            "condition": "Scattered Clouds",
-            "temperature_c": 23.45,
-            "feels_like_c": 23.1,
-            "humidity_percent": 48,
-            "wind_speed_kmh": 4.9,
-            "wind_direction_deg": 302,
-            "visibility_km": 10.0,
-            "cloud_cover_percent": 35,
-            "rain_last_1h_mm": 0,
-            "traffic_weather_impact": "LOW \u2014 Weather conditions are favorable for travel"
-        },
-        "mappls_live_traffic": {
-            "Distance (km)": 4.31,
-            "Travel Time (min)": 8.5,
-            "Traffic Delay (min)": 0,
-            "Average Speed (km/h)": 30.5,
-            "Congestion Level": "LOW"
-        }
-    },
-    {
-        "venue": {
-            "name": "AISSMS,Pune",
-            "type": "college",
-            "capacity": "3,000"
-        },
-        "event_context": {
-            "likely_event_today": "NO EVENTS",
-            "date": "22 February 2026",
-            "estimated_attendance": "0"
-        },
-        "traffic_prediction": {
-            "severity": "CLEAR",
-            "congestion_index": 10,
-            "confidence": 60,
-            "peak_period": {
-                "start": "N/A",
-                "end": "N/A",
-                "label": "N/A",
-                "description": "No event is happening"
-            }
-        },
-        "impact_zones": [
-            {
-                "radius": "0\u2013500m",
-                "level": 0,
-                "roads_affected": "Kennedy Road, Shivajinagar"
-            },
-            {
-                "radius": "500m\u20132km",
-                "level": 0,
-                "roads_affected": "University Road, Ganeshkhind Road"
-            }
-        ],
-        "location": {
-            "latitude": 18.5313127,
-            "longitude": 73.8657134,
-            "google_maps_link": "https://www.google.com/maps?q=18.5313127,73.8657134"
-        },
-        "nearest_metro_station": {
-            "station_name": "Mangalwar Peth",
-            "distance_km": 0.14,
-            "walking_time_mins": 2,
-            "auto_time_mins": 0,
-            "lat": 18.5300875,
-            "lon": 73.8654426,
-            "osm_id": 7944584974,
-            "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=18.5300875,73.8654426"
-        },
-        "weather": {
-            "condition": "Scattered Clouds",
-            "temperature_c": 23.45,
-            "feels_like_c": 23.1,
-            "humidity_percent": 48,
-            "wind_speed_kmh": 4.9,
-            "wind_direction_deg": 302,
-            "visibility_km": 10.0,
-            "cloud_cover_percent": 35,
-            "rain_last_1h_mm": 0,
-            "traffic_weather_impact": "LOW \u2014 Weather conditions are favorable for travel"
-        },
-        "mappls_live_traffic": {
-            "Distance (km)": 4.31,
-            "Travel Time (min)": 8.5,
-            "Traffic Delay (min)": 0,
-            "Average Speed (km/h)": 30.5,
-            "Congestion Level": "LOW"
-        }
-    },
-    {
-        "venue": {
-            "name": "VIT,Pune",
-            "type": "college",
-            "capacity": "4,000"
-        },
-        "event_context": {
-            "likely_event_today": "Techathon Innovation 3.0, Alacrity Fest Day 3",
-            "date": "22 February 2026",
-            "estimated_attendance": "2,500"
-        },
-        "traffic_prediction": {
-            "severity": "LOW",
-            "congestion_index": 35,
-            "confidence": 65,
-            "peak_period": {
-                "start": "10:00",
-                "end": "11:30",
-                "label": "10:00 \u2013 11:30 AM",
-                "description": "Morning arrival of students and faculty for the event."
-            }
-        },
-        "impact_zones": [
-            {
-                "radius": "0\u2013500m",
-                "level": 1,
-                "roads_affected": "Bibwewadi Road, near VIT Pune entrance"
-            },
-            {
-                "radius": "500m\u20132km",
-                "level": 1,
-                "roads_affected": "Pune-Satara Road, Market Yard Road"
-            }
-        ],
-        "location": {
-            "latitude": 18.4637697,
-            "longitude": 73.8682067,
-            "google_maps_link": "https://www.google.com/maps?q=18.4637697,73.8682067"
-        },
-        "nearest_metro_station": {
-            "station_name": "Metro lookup failed",
-            "error": "Expecting value: line 1 column 1 (char 0)",
-            "note": "Check https://punemetrorail.org for latest station info"
-        },
-        "weather": {
-            "condition": "Scattered Clouds",
-            "temperature_c": 22.95,
-            "feels_like_c": 22.53,
-            "humidity_percent": 47,
-            "wind_speed_kmh": 4.6,
-            "wind_direction_deg": 306,
-            "visibility_km": 10.0,
-            "cloud_cover_percent": 39,
-            "rain_last_1h_mm": 0,
-            "traffic_weather_impact": "LOW \u2014 Weather conditions are favorable for travel"
-        },
-        "mappls_live_traffic": {
-            "Distance (km)": 5.84,
-            "Travel Time (min)": 11.7,
-            "Traffic Delay (min)": 0,
-            "Average Speed (km/h)": 30.0,
-            "Congestion Level": "LOW"
-        }
-    },
-    {
-        "venue": {
             "name": "Wankhede stadium",
             "type": "stadium",
             "capacity": "45,000"
@@ -465,6 +199,362 @@
             "Traffic Delay (min)": 0,
             "Average Speed (km/h)": 33.7,
             "Congestion Level": "LOW"
+        }
+    },
+    {
+        "venue": {
+            "name": "VIT Pune",
+            "type": "college",
+            "capacity": "4,500"
+        },
+        "event_context": {
+            "likely_event_today": "Tech Surge 5.0, Innovation Expo 2026",
+            "date": "22 February 2026",
+            "estimated_attendance": "2,000"
+        },
+        "traffic_prediction": {
+            "severity": "LOW",
+            "congestion_index": 35,
+            "confidence": 65,
+            "peak_period": {
+                "start": "10:00",
+                "end": "11:30",
+                "label": "10:00 \u2013 11:30 AM",
+                "description": "Morning arrival of students and event participants."
+            }
+        },
+        "impact_zones": [
+            {
+                "radius": "0\u2013500m",
+                "level": 1,
+                "roads_affected": "Bibwewadi Road, near VIT Pune entrance"
+            },
+            {
+                "radius": "500m\u20132km",
+                "level": 0,
+                "roads_affected": "Laxmi Nagar Road, Market Yard Road"
+            }
+        ],
+        "location": {
+            "latitude": 18.4637697,
+            "longitude": 73.8682067,
+            "google_maps_link": "https://www.google.com/maps?q=18.4637697,73.8682067"
+        },
+        "nearest_metro_station": {
+            "station_name": "Unknown Station",
+            "distance_km": 4.11,
+            "walking_time_mins": 51,
+            "auto_time_mins": 8,
+            "lat": 18.4994278,
+            "lon": 73.8578411,
+            "osm_id": 13392139824,
+            "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=18.4994278,73.8578411"
+        },
+        "weather": {
+            "condition": "Few Clouds",
+            "temperature_c": 22.08,
+            "feels_like_c": 21.62,
+            "humidity_percent": 49,
+            "wind_speed_kmh": 2.4,
+            "wind_direction_deg": 272,
+            "visibility_km": 10.0,
+            "cloud_cover_percent": 17,
+            "rain_last_1h_mm": 0,
+            "traffic_weather_impact": "LOW \u2014 Weather conditions are favorable for travel"
+        },
+        "mappls_live_traffic": {
+            "Distance (km)": 5.84,
+            "Travel Time (min)": 11.7,
+            "Traffic Delay (min)": 0,
+            "Average Speed (km/h)": 30.0,
+            "Congestion Level": "LOW"
+        }
+    },
+    {
+        "venue": {
+            "name": "AISSMS College of Engineering",
+            "type": "college",
+            "capacity": "5,000"
+        },
+        "event_context": {
+            "likely_event_today": "Techathon Innovation 3.0, Alacrity Fest Day 3",
+            "date": "22 February 2026",
+            "estimated_attendance": "1,200"
+        },
+        "traffic_prediction": {
+            "severity": "LOW",
+            "congestion_index": 30,
+            "confidence": 65,
+            "peak_period": {
+                "start": "16:00",
+                "end": "18:00",
+                "label": "4:00 PM \u2013 6:00 PM",
+                "description": "Student departure after college hours and event conclusion."
+            }
+        },
+        "impact_zones": [
+            {
+                "radius": "0\u2013500m",
+                "level": 2,
+                "roads_affected": "Kennedy Road, Shivajinagar"
+            },
+            {
+                "radius": "500m\u20132km",
+                "level": 1,
+                "roads_affected": "Pune University Road, FC Road"
+            }
+        ],
+        "location": {
+            "latitude": 18.5313127,
+            "longitude": 73.8657134,
+            "google_maps_link": "https://www.google.com/maps?q=18.5313127,73.8657134"
+        },
+        "nearest_metro_station": {
+            "station_name": "Mangalwar Peth",
+            "distance_km": 0.14,
+            "walking_time_mins": 2,
+            "auto_time_mins": 0,
+            "lat": 18.5300875,
+            "lon": 73.8654426,
+            "osm_id": 7944584974,
+            "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=18.5300875,73.8654426"
+        },
+        "weather": {
+            "condition": "Clear Sky",
+            "temperature_c": 29.19,
+            "feels_like_c": 27.82,
+            "humidity_percent": 26,
+            "wind_speed_kmh": 9.7,
+            "wind_direction_deg": 4,
+            "visibility_km": 10.0,
+            "cloud_cover_percent": 6,
+            "rain_last_1h_mm": 0,
+            "traffic_weather_impact": "LOW \u2014 Weather conditions are favorable for travel"
+        },
+        "mappls_live_traffic": {
+            "Distance (km)": 4.31,
+            "Travel Time (min)": 8.5,
+            "Traffic Delay (min)": 0,
+            "Average Speed (km/h)": 30.5,
+            "Congestion Level": "LOW"
+        }
+    },
+    {
+        "venue": {
+            "name": "AISSMS College of Engineering",
+            "type": "college",
+            "capacity": "5,000"
+        },
+        "event_context": {
+            "likely_event_today": "Techathon Innovation 3.0, Alacrity Fest Day 3",
+            "date": "22 February 2026",
+            "estimated_attendance": "1,200"
+        },
+        "traffic_prediction": {
+            "severity": "LOW",
+            "congestion_index": 30,
+            "confidence": 65,
+            "peak_period": {
+                "start": "16:00",
+                "end": "18:00",
+                "label": "4:00 PM \u2013 6:00 PM",
+                "description": "Student dismissal and event conclusion leading to increased vehicular movement."
+            }
+        },
+        "impact_zones": [
+            {
+                "radius": "0\u2013500m",
+                "level": 1,
+                "roads_affected": "Kennedy Road, Shivajinagar Road"
+            },
+            {
+                "radius": "500m\u20132km",
+                "level": 1,
+                "roads_affected": "Pune University Road, Senapati Bapat Road"
+            }
+        ],
+        "location": {
+            "latitude": 18.5313127,
+            "longitude": 73.8657134,
+            "google_maps_link": "https://www.google.com/maps?q=18.5313127,73.8657134"
+        },
+        "nearest_metro_station": {
+            "station_name": "Mangalwar Peth",
+            "distance_km": 0.14,
+            "walking_time_mins": 2,
+            "auto_time_mins": 0,
+            "lat": 18.5300875,
+            "lon": 73.8654426,
+            "osm_id": 7944584974,
+            "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=18.5300875,73.8654426"
+        },
+        "weather": {
+            "condition": "Clear Sky",
+            "temperature_c": 30.39,
+            "feels_like_c": 28.63,
+            "humidity_percent": 22,
+            "wind_speed_kmh": 11.1,
+            "wind_direction_deg": 29,
+            "visibility_km": 10.0,
+            "cloud_cover_percent": 4,
+            "rain_last_1h_mm": 0,
+            "traffic_weather_impact": "LOW \u2014 Weather conditions are favorable for travel"
+        },
+        "mappls_live_traffic": {
+            "Distance (km)": 4.31,
+            "Travel Time (min)": 8.5,
+            "Traffic Delay (min)": 0,
+            "Average Speed (km/h)": 30.5,
+            "Congestion Level": "LOW"
+        }
+    },
+    {
+        "venue": {
+            "name": "FLAME University",
+            "type": "University",
+            "capacity": "N/A"
+        },
+        "event_context": {
+            "likely_event_today": false,
+            "date": "2024-01-01",
+            "estimated_attendance": "N/A"
+        },
+        "traffic_prediction": {
+            "severity": "Low",
+            "congestion_index": 2,
+            "confidence": "Medium",
+            "peak_period": {
+                "start": "08:00",
+                "end": "09:00",
+                "label": "Morning Commute",
+                "description": "Typical morning commute to the University."
+            }
+        },
+        "impact_zones": {
+            "radius": "1km",
+            "level": "Minor",
+            "roads_affected": "Roads leading to FLAME University entrance."
+        },
+        "location": {
+            "latitude": 18.5237945,
+            "longitude": 73.7306378
+        },
+        "nearest_metro_station": {
+            "station_name": "None",
+            "distance_km": null
+        },
+        "weather": {
+            "condition": "Clear Sky",
+            "temperature_c": 33.55
+        },
+        "mappls_live_traffic": {
+            "distance_km": 14.65,
+            "travel_time_min": 28.0,
+            "traffic_delay_min": 0,
+            "average_speed_kmh": 31.4,
+            "congestion_level": "LOW"
+        }
+    },
+    {
+        "venue": {
+            "name": "AISSMS",
+            "type": "Educational Institute",
+            "capacity": "Not available"
+        },
+        "event_context": {
+            "likely_event_today": false,
+            "date": "2024-02-29",
+            "estimated_attendance": "Unknown"
+        },
+        "traffic_prediction": {
+            "severity": "Moderate",
+            "congestion_index": 60,
+            "confidence": "Medium",
+            "peak_period": {
+                "start": "08:00",
+                "end": "10:00",
+                "label": "Morning Commute",
+                "description": "Increased traffic due to school and office commutes."
+            }
+        },
+        "impact_zones": {
+            "radius": "500m",
+            "level": "Medium",
+            "roads_affected": [
+                "Shivaji Road",
+                "Kennedy Road",
+                "Near AISSMS College Chowk"
+            ]
+        },
+        "location": {
+            "latitude": 18.5313127,
+            "longitude": 73.8657134
+        },
+        "nearest_metro_station": {
+            "station_name": "Error",
+            "distance_km": null
+        },
+        "weather": {
+            "condition": "Clear Sky",
+            "temperature_c": 33.38
+        },
+        "mappls_live_traffic": {
+            "distance_km": 4.31,
+            "travel_time_min": 8.5,
+            "traffic_delay_min": 0,
+            "average_speed_kmh": 30.5,
+            "congestion_level": "LOW"
+        }
+    },
+    {
+        "venue": {
+            "name": "AISSMS College",
+            "type": "Educational Institution",
+            "capacity": "N/A"
+        },
+        "event_context": {
+            "likely_event_today": false,
+            "date": "2024-02-29",
+            "estimated_attendance": "N/A"
+        },
+        "traffic_prediction": {
+            "severity": "Low",
+            "congestion_index": 30,
+            "confidence": "Medium",
+            "peak_period": {
+                "start": "08:00",
+                "end": "09:30",
+                "label": "Morning Commute",
+                "description": "Increased traffic due to students and staff arriving at the college and general morning commute."
+            }
+        },
+        "impact_zones": {
+            "radius": "500m",
+            "level": "Minor",
+            "roads_affected": [
+                "Kennedy Road",
+                "Shivaji Road",
+                "Nearby access roads to the college"
+            ]
+        },
+        "location": {
+            "latitude": 18.5313127,
+            "longitude": 73.8657134
+        },
+        "nearest_metro_station": {
+            "station_name": "Error",
+            "distance_km": null
+        },
+        "weather": {
+            "condition": "Clear Sky",
+            "temperature_c": 33.38
+        },
+        "mappls_live_traffic": {
+            "distance_km": 4.31,
+            "travel_time_min": 8.5,
+            "traffic_delay_min": 0,
+            "average_speed_kmh": 30.5,
+            "congestion_level": "LOW"
         }
     }
 ]

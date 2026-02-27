@@ -1,47 +1,5 @@
 [
     {
-        "decision_summary": "Anticipate moderate congestion due to VIT's Alacrity Fest Day 3, particularly during student departure. Proactive signal adjustments and public advisories are needed to manage traffic flow around Bibwewadi Road and Lullanagar Chowk.",
-        "priority_level": "medium",
-        "signal_actions": [
-            {
-                "junction_area": "Bibwewadi Road - VIT Main Gate",
-                "east_west_green_time_sec": 45,
-                "north_south_green_time_sec": 60,
-                "reason": "Prioritize outflow from VIT during peak departure hours (4:00 PM - 6:30 PM) to prevent immediate choke points."
-            },
-            {
-                "junction_area": "Lullanagar Chowk",
-                "east_west_green_time_sec": 50,
-                "north_south_green_time_sec": 55,
-                "reason": "Slightly increase green time for traffic moving away from VIT towards Kondhwa Road to facilitate dispersion."
-            }
-        ],
-        "traffic_management_actions": [
-            "Deploy traffic wardens/police personnel at Bibwewadi Road near VIT and Lullanagar Chowk from 3:30 PM to 7:00 PM.",
-            "Monitor real-time traffic conditions via CCTV and Mappls Live Traffic for immediate adjustments.",
-            "Ensure clear access for emergency services around VIT and major arterial roads.",
-            "Consider temporary 'No Parking' zones on Bibwewadi Road adjacent to VIT if congestion escalates."
-        ],
-        "public_advisories": [
-            "ATTENTION: Expect moderate traffic congestion around VIT Pune (Bibwewadi Road, Lullanagar Chowk) between 4:00 PM and 6:30 PM today due to the Alacrity Fest. Please plan your commute accordingly.",
-            "Commuters are advised to use alternative routes if possible or allow for extra travel time when passing through Bibwewadi and Kondhwa areas.",
-            "Public transport is recommended for those attending or traveling near VIT Pune."
-        ],
-        "risk_assessment": {
-            "choke_probability": 0.6,
-            "crash_risk": 0.4,
-            "pedestrian_density": "high"
-        },
-        "map_visualization_flags": {
-            "highlight_event_zone": true,
-            "highlight_congestion": true,
-            "show_metro_option": false,
-            "alert_level": "orange"
-        },
-        "next_review_in_minutes": 30,
-        "confidence": 0.7
-    },
-    {
         "decision_summary": "Traffic is currently clear with no events. Maintain standard traffic flow and monitor for any unexpected changes.",
         "priority_level": "low",
         "signal_actions": [],
@@ -66,5 +24,80 @@
         },
         "next_review_in_minutes": 30,
         "confidence": 0.85
+    },
+    {
+        "decision_summary": "Anticipating low to moderate traffic impact due to the Tech Symposium at MIT Pune. Focus on maintaining smooth flow on Paud Road and MIT College Road during peak event hours. No significant congestion or safety concerns are currently identified.",
+        "priority_level": "low",
+        "signal_actions": [
+            {
+                "junction_area": "Paud Road - MIT College Road Intersection",
+                "east_west_green_time_sec": 70,
+                "north_south_green_time_sec": 50,
+                "reason": "Adjusting signal timings to prioritize traffic flow on Paud Road and MIT College Road during the morning peak event period (10:00-12:00) to accommodate increased vehicle and pedestrian movement towards MIT Pune. This is a minor adjustment given the low predicted severity."
+            }
+        ],
+        "traffic_management_actions": [
+            "Monitor live traffic cameras around MIT Pune, Paud Road, and MIT College Road from 09:30 to 12:30.",
+            "Deploy one traffic warden at the MIT College Road entrance from 09:45 to 12:15 for pedestrian and vehicle management.",
+            "Ensure clear access to Anandnagar Metro Station for attendees opting for public transport."
+        ],
+        "public_advisories": [
+            "Attendees of the Tech Symposium at MIT Pune are advised to use public transport, especially the Pune Metro to Anandnagar station, to avoid potential minor delays.",
+            "Motorists in the vicinity of MIT Pune (Paud Road, MIT College Road) between 10:00 AM and 12:00 PM may experience minor increased traffic volume. Please drive cautiously."
+        ],
+        "risk_assessment": {
+            "choke_probability": 0.15,
+            "crash_risk": 0.1,
+            "pedestrian_density": "moderate"
+        },
+        "map_visualization_flags": {
+            "highlight_event_zone": true,
+            "highlight_congestion": false,
+            "show_metro_option": true,
+            "alert_level": "green"
+        },
+        "next_review_in_minutes": 60,
+        "confidence": 0.65
+    },
+    {
+        "decision_summary": "Manage traffic flow around MIT Pune due to Tech Symposium, Innovation Expo, and Alumni Meet. Traffic impact is expected to be low.",
+        "priority_level": "low",
+        "signal_actions": [
+            {
+                "junction_area": "Paud Road - MIT College Road Intersection",
+                "east_west_green_time_sec": 45,
+                "north_south_green_time_sec": 40,
+                "reason": "Slightly increase Paud Road green time to accommodate event traffic."
+            },
+            {
+                "junction_area": "Karve Road - MIT College Road Intersection",
+                "east_west_green_time_sec": 50,
+                "north_south_green_time_sec": 35,
+                "reason": "Adjust green time to optimize flow on Karve Road."
+            }
+        ],
+        "traffic_management_actions": [
+            "Deploy traffic wardens at Paud Road and MIT College Road intersection to manage pedestrian and vehicle flow.",
+            "Monitor traffic flow near Anandnagar metro station and adjust signal timings if needed to facilitate metro access.",
+            "Coordinate with event organizers to encourage attendees to use public transport, especially the metro."
+        ],
+        "public_advisories": [
+            "Expect minor traffic delays around MIT Pune due to ongoing events.",
+            "Consider using the Anandnagar metro station to avoid traffic congestion.",
+            "Follow traffic warden instructions for smooth traffic flow."
+        ],
+        "risk_assessment": {
+            "choke_probability": 0.1,
+            "crash_risk": 0.05,
+            "pedestrian_density": "moderate"
+        },
+        "map_visualization_flags": {
+            "highlight_event_zone": true,
+            "highlight_congestion": false,
+            "show_metro_option": true,
+            "alert_level": "green"
+        },
+        "next_review_in_minutes": 30,
+        "confidence": 0.7
     }
 ]
